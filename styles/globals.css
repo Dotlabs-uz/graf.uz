@@ -17,6 +17,7 @@ ul,
 ol,
 li {
    list-style: none;
+   /* background: linear-gradient(69deg, # , # %); */
 }
 
 body {
@@ -25,7 +26,7 @@ body {
 }
 
 .custom-container {
-   @apply max-w-[1728px] w-full m-auto px-28 max-2xl:px-20 max-xl:px-10 max-lg:px-6;
+   @apply max-w-[1728px] w-full m-auto px-48 max-2xl:px-20 max-xl:px-10 max-lg:px-6;
 }
 
 /* ==================== HEADER ==================== */

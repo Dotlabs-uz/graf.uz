@@ -6,6 +6,8 @@ import Hero from "@/containers/Hero";
 import Footer from "@/components/Footer";
 
 import { Inter } from "next/font/google";
+import PriceCourses from "@/containers/PriceCourses";
+import Course from "@/containers/Course";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -50,7 +52,15 @@ export default function Home() {
          </section>
 
          <section>
-            <div className="w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
+            <Course />
+         </section>
+
+         <section>
+            <PriceCourses />
+         </section>
+
+         <section>
+            <div className="mt-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
             <div className="bg-gradient-to-r from-[#18234A] from-1.3% to-[#0B0414] to-90.92% py-20">
                <div className="custom-container flex max-lg:flex-col items-center justify-between ">
                   <div className="">
