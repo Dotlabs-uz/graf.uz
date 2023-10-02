@@ -4,10 +4,14 @@ import Image from "next/image";
 import Header from "@/components/Header";
 import Hero from "@/containers/Hero";
 import Footer from "@/components/Footer";
-
-import { Inter } from "next/font/google";
 import PriceCourses from "@/containers/PriceCourses";
 import Course from "@/containers/Course";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+import "swiper/css";
+
+import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -47,8 +51,77 @@ export default function Home() {
    return (
       <>
          <Header />
+
          <section>
             <Hero />
+         </section>
+
+         <section className="overflow-hidden">
+            <div className="custom-container pb-96">
+               <div className="mb-16">
+                  <h2 className="text-[78px] font-bold text-center text-white">
+                     BITIRUVCHILAR MAHORATI
+                  </h2>
+               </div>
+
+               <div className="mb-16 flex items-center justify-between">
+                  <div className="flex flex-col gap-4">
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           After effects
+                        </p>
+                     </div>
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           Photoshop
+                        </p>
+                     </div>
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           Premiere Pro
+                        </p>
+                     </div>
+                  </div>
+
+                  <div className="flex flex-col gap-4">
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           Design
+                        </p>
+                     </div>
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           Editing
+                        </p>
+                     </div>
+                     <div className="w-fit py-1 px-8 rounded-3xl border border-white">
+                        <p className="text-[28px] leading-[42px] text-white">
+                           Sound
+                        </p>
+                     </div>
+                  </div>
+               </div>
+
+               <div className="relative ">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[41%] w-[534px]">
+                     <Image
+                        src={"/images/phone.svg"}
+                        width={1000}
+                        height={1000}
+                        alt="phone"
+                     />
+                  </div>
+                  <Swiper spaceBetween={20} slidesPerView={4}>
+                     {[0, 1, 2, 3, 4, 5, 6, 7].map((item: number) => {
+                        return (
+                           <SwiperSlide key={item}>
+                              <div className="w-[327px] h-[451px] rounded-[48px] shadow-[0px_10px_20px_#0094ff9c] bg-[#2f1c58] hover:-translate-y-3 duration-200 ease-in-out"></div>
+                           </SwiperSlide>
+                        );
+                     })}
+                  </Swiper>
+               </div>
+            </div>
          </section>
 
          <section>
@@ -195,6 +268,7 @@ export default function Home() {
             </div>
             <div className="mb-7 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
          </section>
+
          <Footer />
       </>
    );

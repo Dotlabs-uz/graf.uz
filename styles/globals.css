@@ -17,7 +17,7 @@ ul,
 ol,
 li {
    list-style: none;
-   /* background: linear-gradient(69deg, # , # %); */
+   /* border: 2px solid #; */
 }
 
 body {
@@ -55,4 +55,8 @@ body {
       rgba(255, 255, 255, 0.2) 10.42%,
       rgba(255, 255, 255, 0.04) 77.11%
    );
+}
+
+.swiper {
+   overflow: visible !important;
 }
