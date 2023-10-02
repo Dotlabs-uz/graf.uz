@@ -1,11 +1,13 @@
+import Image from "next/image";
+
 interface CourseProps {}
 
 const Course: React.FC<CourseProps> = () => {
    return (
       <>
          <div className="mt-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
-         <div className="bg-gradient-to-r from-[#0B0414] from-1.3% to-[#18234A] to-90.92% py-20">
-            <div className="custom-container">
+         <div className="bg-gradient-to-r from-[#0B0414] from-1.3% to-[#18234A] to-90.92% py-40">
+            <div className="custom-container flex items-center justify-between">
                <div className="w-1/2">
                   <div className="mb-8">
                      <h2 className="text-[72px] font-bold text-white">
@@ -43,7 +45,64 @@ const Course: React.FC<CourseProps> = () => {
                      </button>
                   </div>
                </div>
-               <div className=""></div>
+               <div className="relative z-10">
+                  <Image
+                     className="absolute z-[60] top-20 -right-5 w-16"
+                     src={"/images/apps/cube.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <Image
+                     className="absolute z-[60] -left-16 bottom-72 w-32"
+                     src={"/images/apps/cube.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <Image
+                     className="absolute -top-10 -left-48 z-[-20] w-64"
+                     src={"/images/apps/photoshop.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <Image
+                     className="absolute z-[60] -right-24 max-2xl:-right-16 max-xl:-right-8 top-80 w-40"
+                     src={"/images/apps/premiere.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <Image
+                     className="absolute -top-20 right-6 w-40"
+                     src={"/images/apps/illustrator.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <Image
+                     className="absolute z-[60] -left-32 bottom-52 w-44"
+                     src={"/images/apps/aftereffects.svg"}
+                     width={1000}
+                     height={1000}
+                     alt="iphone"
+                  />
+                  <div className="absolute z-[60] top-60 -left-24 w-fit py-5 px-10 text-[34px] font-bold rounded-[30px] border-2 border-[#ffffff80] text-white backdrop-blur-[35px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                     <p>Design</p>
+                  </div>
+                  <div className="absolute z-[60] top-40 -right-24 max-2xl:-right-16 max-xl:-right-8 w-fit py-5 px-10 text-[34px] font-bold rounded-[30px] border-2 border-[#ffffff80] text-white backdrop-blur-[35px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                     <p>Trend</p>
+                  </div>
+                  <div className="relative z-50 w-96">
+                     <Image
+                        src={"/images/iphone.svg"}
+                        width={1000}
+                        height={1000}
+                        alt="iphone"
+                     />
+                  </div>
+               </div>
             </div>
          </div>
          <div className="mb-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
