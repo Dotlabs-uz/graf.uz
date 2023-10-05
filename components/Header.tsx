@@ -4,7 +4,7 @@ interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
    return (
-      <header>
+      <header className="mb-10 max-md:mb-5">
          <div className="header">
             <nav>
                <ul className="header-ul">

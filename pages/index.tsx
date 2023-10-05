@@ -6,15 +6,18 @@ import Hero from "@/containers/Hero";
 import Footer from "@/components/Footer";
 import PriceCourses from "@/containers/PriceCourses";
 import Course from "@/containers/Course";
+import Mentor from "@/containers/Mentor";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 
 import { Inter } from "next/font/google";
+import Range from "@/components/children/Range";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+   const [active, setActive] = useState(0);
+
    const [stop, setStop] = useState(false);
    const [days, setDays] = useState(0);
    const [hours, setHours] = useState(0);
@@ -56,15 +59,303 @@ export default function Home() {
             <Hero />
          </section>
 
+         <section>
+            <div className="custom-container">
+               <div className="flex justify-center my-10">
+                  <div className="relative border border-white px-7 py-1">
+                     <span className="absolute -top-2 -left-2 max-sm:-top-1 max-sm:-left-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <span className="absolute -top-2 -right-2 max-sm:-top-1 max-sm:-right-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <span className="absolute -top-2 left-1/2 max-sm:-top-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <span className="absolute -bottom-2 -left-2 max-sm:-bottom-1 max-sm:-left-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <span className="absolute -bottom-2 left-1/2 max-sm:-bottom-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <span className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+                     <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold text-white">
+                        Kurs dasturi
+                     </h2>
+                  </div>
+               </div>
+
+               <div className="mb-10">
+                  <div className="">
+                     <Range />
+                  </div>
+
+                  <div className="rounded-[10px] border-2 border-[#ffffff1a]">
+                     <ul className="flex bg-[#00000029]">
+                        <li className="flex items-center gap-2 py-3 px-10 border-b-2 border-[#ffffff1a]">
+                           <p className="w-3 h-3 rounded-full border-2 border-[#ffffff1a]"></p>
+                           <p className="w-3 h-3 rounded-full border-2 border-[#ffffff1a]"></p>
+                           <p className="w-3 h-3 rounded-full border-2 border-[#ffffff1a]"></p>
+                        </li>
+                        {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item: number) => {
+                           return (
+                              <li
+                                 onClick={() => setActive(item)}
+                                 key={item}
+                                 className={`w-full flex items-center justify-center text-[14px] ${
+                                    active === item
+                                       ? "border-x-2 border-[#ffffff1a] text-[#fff] bg-[#ffffff0f]"
+                                       : "border-b-2 border-[#ffffff1a] text-[#ffffff33]"
+                                 }`}
+                              >
+                                 MODUL #{item + 1}
+                              </li>
+                           );
+                        })}
+                     </ul>
+                     <div className="flex justify-between py-6 px-20 gradient">
+                        <div className="w-1/2">
+                           <div className="">
+                              <p className="font-medium text-white">
+                                 SMD | Modul #{active + 1}
+                              </p>
+                              <h3 className="text-[31px] text-white">
+                                 Adobe Photoshop dasturiga kirish
+                              </h3>
+                           </div>
+                           <div className="">
+                              <ul className="flex flex-col max-md:justify-center gap-5 mt-5 pl-10">
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       1
+                                    </span>
+                                    Interfeys va instrumentlar
+                                 </li>
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       2
+                                    </span>
+                                    Sloylar bilan ishlash
+                                 </li>
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       3
+                                    </span>
+                                    Blending Options
+                                 </li>
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       4
+                                    </span>
+                                    Peen Tool / Bézier Game
+                                 </li>
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       5
+                                    </span>
+                                    Belgilash va kesish texnikasi, Maska{" "}
+                                 </li>
+                                 <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+                                    <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                                       <svg
+                                          xmlns="http://www.w3.org/2000/svg"
+                                          width="206"
+                                          height="216"
+                                          viewBox="0 0 206 216"
+                                          fill="none"
+                                       >
+                                          <path
+                                             d="M116.985 105.626L105.285 89.7854C104.555 88.7964 103.399 88.2148 102.165 88.2148L91.8772 88.2148C88.7067 88.2148 86.8803 91.8016 88.7579 94.3441L98.7773 107.906L88.7579 121.468C86.8803 124.01 88.7067 127.597 91.8772 127.597L102.165 127.597C103.399 127.597 104.555 127.015 105.285 126.026L116.985 110.185C117.988 108.827 117.988 106.981 116.985 105.626Z"
+                                             fill="url(#paint1_linear_0_196)"
+                                          />
+                                          <defs>
+                                             <linearGradient
+                                                id="paint1_linear_0_196"
+                                                x1="87.0041"
+                                                y1="108.343"
+                                                x2="117.16"
+                                                y2="107.009"
+                                                gradientUnits="userSpaceOnUse"
+                                             >
+                                                <stop stop-color="#4773F8" />
+                                                <stop
+                                                   offset="1"
+                                                   stop-color="#0000B8"
+                                                />
+                                             </linearGradient>
+                                          </defs>
+                                       </svg>
+                                    </span>
+                                    <span className="w-[55px] h-[55px] flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                                       6
+                                    </span>
+                                    Cleanup, Retush
+                                 </li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div className="w-2/5">
+                           <div className="w-full h-full bg-gray-600">qwf</div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </section>
+
+         <section>
+            <Mentor />
+         </section>
+
          <section className="overflow-hidden">
             <div className="custom-container pb-96">
                <div className="mb-16">
-                  <h2 className="text-[78px] font-bold text-center text-white">
+                  <h2 className="text-[78px] max-md:text-[50px] max-sm:text-[30px] font-bold text-center text-white">
                      BITIRUVCHILAR MAHORATI
                   </h2>
                </div>
 
-               <div className="mb-16 flex items-center justify-between">
+               <div className="max-lg:hidden mb-16 flex items-center justify-between">
                   <div className="flex flex-col gap-4">
                      <div className="w-fit py-1 px-8 rounded-3xl border border-white">
                         <p className="text-[28px] leading-[42px] text-white">
@@ -103,7 +394,7 @@ export default function Home() {
                </div>
 
                <div className="relative ">
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[41%] w-[534px]">
+                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[41%] max-lg:-translate-y-[360px] max-md:-translate-y-[360px] max-sm:-translate-y-[300px] w-[534px] max-xl:w-[460px] max-sm:w-[380px]">
                      <Image
                         src={"/images/phone.svg"}
                         width={1000}
@@ -111,11 +402,34 @@ export default function Home() {
                         alt="phone"
                      />
                   </div>
-                  <Swiper spaceBetween={20} slidesPerView={4}>
+                  <Swiper
+                     className="mt-40"
+                     spaceBetween={20}
+                     slidesPerView={4}
+                     breakpoints={{
+                        0: {
+                           slidesPerView: 1,
+                           spaceBetween: 15,
+                        },
+                        640: {
+                           slidesPerView: 2,
+                           spaceBetween: 20,
+                        },
+                        1024: {
+                           slidesPerView: 3,
+                        },
+                        1280: {
+                           slidesPerView: 4,
+                        },
+                     }}
+                  >
                      {[0, 1, 2, 3, 4, 5, 6, 7].map((item: number) => {
                         return (
-                           <SwiperSlide key={item}>
-                              <div className="w-[327px] h-[451px] rounded-[48px] shadow-[0px_10px_20px_#0094ff9c] bg-[#2f1c58] hover:-translate-y-3 duration-200 ease-in-out"></div>
+                           <SwiperSlide
+                              className="flex justify-center"
+                              key={item}
+                           >
+                              <div className="w-full h-[451px] max-xl:h-[390px] max-sm:h-[300px] rounded-[48px] shadow-[0px_10px_20px_#0094ff9c] bg-[#2f1c58] hover:-translate-y-3 duration-200 ease-in-out"></div>
                            </SwiperSlide>
                         );
                      })}

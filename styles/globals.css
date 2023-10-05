@@ -17,7 +17,6 @@ ul,
 ol,
 li {
    list-style: none;
-   /* border: 2px solid #; */
 }
 
 body {
@@ -49,10 +48,21 @@ body {
 
 /* ================================================= */
 
+.gradient {
+   background: radial-gradient(
+         63.94% 63.94% at 50% 0%,
+         #ffffff1f 0%,
+         #ffffff00 100%
+      ),
+      #ffffff03;
+}
+
+/* ================================================= */
+
 .inp {
    background: linear-gradient(
       69deg,
-      rgba(255, 255, 255, 0.2) 10.42%,
+      #ffffff33 10.42%,
       rgba(255, 255, 255, 0.04) 77.11%
    );
 }
@@ -60,3 +70,10 @@ body {
 .swiper {
    overflow: visible !important;
 }
+
+.mentor {
+   font-size: calc(98px + (337 - 98) * ((100vw - 400px) / (1536 - 400)));
+}
+
+/* ======================================================= */
+
