@@ -13,20 +13,20 @@
 <feGaussianBlur stdDeviation="66" result="effect2_foregroundBlur_0_74"/>
 </filter>
 <radialGradient id="paint0_angular_0_74" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(566.5 891) rotate(90) scale(285.112 83.0016)">
-<stop offset="0.00503373" stop-color="#D67EE2"/>
-<stop offset="0.2114" stop-color="#3B3BF9"/>
-<stop offset="0.336422" stop-color="#18131A" stop-opacity="0.131006"/>
-<stop offset="0.835338" stop-color="#071612" stop-opacity="0"/>
+<stop offset="0.00503373" stopColor="#D67EE2"/>
+<stop offset="0.2114" stopColor="#3B3BF9"/>
+<stop offset="0.336422" stopColor="#18131A" stop-opacity="0.131006"/>
+<stop offset="0.835338" stopColor="#071612" stop-opacity="0"/>
 <stop offset="0.971482" stop-opacity="0"/>
-<stop offset="0.993151" stop-color="white"/>
+<stop offset="0.993151" stopColor="white"/>
 </radialGradient>
 <radialGradient id="paint1_angular_0_74" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(293.5 304) rotate(90) scale(285.112 83.0016)">
-<stop offset="0.00503373" stop-color="#D67EE2"/>
-<stop offset="0.2114" stop-color="#3B3BF9"/>
-<stop offset="0.336422" stop-color="#18131A" stop-opacity="0.131006"/>
-<stop offset="0.835338" stop-color="#071612" stop-opacity="0"/>
+<stop offset="0.00503373" stopColor="#D67EE2"/>
+<stop offset="0.2114" stopColor="#3B3BF9"/>
+<stop offset="0.336422" stopColor="#18131A" stop-opacity="0.131006"/>
+<stop offset="0.835338" stopColor="#071612" stop-opacity="0"/>
 <stop offset="0.971482" stop-opacity="0"/>
-<stop offset="0.993151" stop-color="white"/>
+<stop offset="0.993151" stopColor="white"/>
 </radialGradient>
 </defs>
 </svg>
