@@ -79,6 +79,7 @@ body {
    display: inline-block;
    border-radius: 2.5px;
    background: #79797980;
+   pointer-events: none;
 }
 
 .range-warapper {
@@ -162,7 +163,7 @@ body {
       }
 
       &::before {
-         @include bullet(6px);
+         @include bullet(0);
 
          content: "";
       }
@@ -194,7 +195,7 @@ body {
             @include bullet(80%);
          }
          &-8 {
-            @include bullet(89.5%);
+            @include bullet(90%);
          }
       }
    }
