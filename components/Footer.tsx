@@ -1,7 +1,53 @@
 import Image from "next/image";
 import Link from "next/link";
+import Social from "./children/Social";
 
 interface FooterProps {}
+
+const social = [
+   {
+      id: 0,
+      icon: "instagram",
+      bg: "#7800B0",
+      title: "Instagram",
+      link: "#",
+   },
+   {
+      id: 1,
+      icon: "you-tube",
+      bg: "#7800B0",
+      title: "Youtube",
+      link: "#",
+   },
+   {
+      id: 2,
+      icon: "tik-tok",
+      bg: "#7800B0",
+      title: "Tiktok",
+      link: "#",
+   },
+   {
+      id: 3,
+      icon: "telegram",
+      bg: "#7800B0",
+      title: "Telegram",
+      link: "#",
+   },
+   {
+      id: 5,
+      icon: "phone",
+      bg: "#7800B0",
+      title: "20 002-09-08",
+      link: "tel:20 002-09-08",
+   },
+   {
+      id: 6,
+      icon: "telegram",
+      bg: "#7800B0",
+      title: "Telegram",
+      link: "#",
+   },
+];
 
 const Footer: React.FC<FooterProps> = () => {
    return (
@@ -28,92 +74,20 @@ const Footer: React.FC<FooterProps> = () => {
                   <h3 className="mb-5 text-2xl max-lg:text-xl font-light leading-[42px] tracking-[0.374px] text-[#ffffffab]">
                      Social
                   </h3>
-                  <ul>
-                     <li className="text-2xl max-lg:text-xl font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <Link href={"#"} className="flex items-center gap-4 ">
-                           <Image
-                              className="w-14 h-14"
-                              src={"/images/social/Instagram.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           Instagram
-                        </Link>
-                     </li>
-                     <li className="text-2xl max-lg:text-xl font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <Link href={"#"} className="flex items-center gap-4 ">
-                           <Image
-                              className="w-14 h-14"
-                              src={"/images/social/youtub.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           Youtube
-                        </Link>
-                     </li>
-                     <li className="text-2xl max-lg:text-xl font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <Link href={"#"} className="flex items-center gap-4 ">
-                           <Image
-                              className="w-14 h-14"
-                              src={"/images/social/tiktok.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           Tiktok
-                        </Link>
-                     </li>
-                     <li className="text-2xl max-lg:text-xl font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <Link href={"#"} className="flex items-center gap-4 ">
-                           <Image
-                              className="w-14 h-14"
-                              src={"/images/social/telegram.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           Telegram
-                        </Link>
-                     </li>
+                  <ul className="flex flex-col gap-3">
+                     {social.slice(0, 4).map((social: any) => {
+                        return <Social key={social.id} social={social} />;
+                     })}
                   </ul>
                </div>
                <div className="">
                   <h3 className="mb-5 max-sm:mb-4 text-2xl max-lg:text-xl max-sm:text-sm font-light leading-[42px] tracking-[0.374px] text-[#ffffffab]">
                      Bog’lanish
                   </h3>
-                  <ul>
-                     <li className="m text-2xl max-lg:text-xl max-sm:text-sm font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <a
-                           href="tel:20 002-09-08"
-                           className="flex items-center gap-4 max-md:gap-2 max-sm:gap-0"
-                        >
-                           <Image
-                              className="w-14 max-md:w-10 max-sm:w-9 h-14 max-md:h-10 max-sm:h-9"
-                              src={"/images/social/instagram.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           20 002-09-08
-                        </a>
-                     </li>
-                     <li className="text-2xl max-lg:text-xl max-sm:text-sm font-semibold leading-[42px] tracking-[0.374px] text-white">
-                        <Link
-                           href={"#"}
-                           className="flex items-center gap-4 max-md:gap-2 max-sm:gap-0"
-                        >
-                           <Image
-                              className="w-14 max-md:w-10 max-sm:w-9 h-14 max-md:h-10 max-sm:h-9"
-                              src={"/images/social/telegram.png"}
-                              width={1000}
-                              height={1000}
-                              alt="Instagram"
-                           />
-                           telegram
-                        </Link>
-                     </li>
+                  <ul className="flex flex-col gap-3">
+                     {social.slice(4).map((social: any) => {
+                        return <Social key={social.id} social={social} />;
+                     })}
                   </ul>
                </div>
                <div className="col-span-3 max-md:block hidden mt-8">
@@ -194,11 +168,11 @@ const Footer: React.FC<FooterProps> = () => {
                   </div>
                </div>
 
-               <div className="flex items-center max-lg:mt-3">
+               <div className="flex items-center gap-5 max-lg:mt-3">
                   <Link href={"#"}>
                      <Image
-                        className="w-24"
-                        src={"/images/social/click.png"}
+                        className="w-28"
+                        src={"/images/social/click.svg"}
                         width={1000}
                         height={1000}
                         alt="click"
@@ -206,8 +180,8 @@ const Footer: React.FC<FooterProps> = () => {
                   </Link>
                   <Link href={"#"}>
                      <Image
-                        className="w-24 ml-5 max-sm:ml-3"
-                        src={"/images/social/payme.png"}
+                        className="w-28"
+                        src={"/images/social/payme.svg"}
                         width={1000}
                         height={1000}
                         alt="click"
@@ -215,8 +189,8 @@ const Footer: React.FC<FooterProps> = () => {
                   </Link>
                   <Link href={"#"}>
                      <Image
-                        className="w-40"
-                        src={"/images/social/uzum.png"}
+                        className="w-28"
+                        src={"/images/social/uzum.svg"}
                         width={1000}
                         height={1000}
                         alt="click"

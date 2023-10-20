@@ -1,5 +1,7 @@
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 interface HeaderProps {}
 
 const Header: React.FC<HeaderProps> = () => {
@@ -8,11 +10,93 @@ const Header: React.FC<HeaderProps> = () => {
          <div className="header">
             <nav>
                <ul className="header-ul">
-                  <li className="header-text">#design</li>
-                  <li className="header-text max-md:hidden">&bull;</li>
-                  <li className="header-text">#motion</li>
-                  <li className="header-text max-md:hidden">&bull;</li>
-                  <li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text"
+                  >
+                     #design
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.1,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text max-md:hidden"
+                  >
+                     &bull;
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.2,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text"
+                  >
+                     #motion
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.3,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text max-md:hidden"
+                  >
+                     &bull;
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.4,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                  >
                      <Image
                         className="header-logo"
                         src={"/images/logo.png"}
@@ -20,11 +104,79 @@ const Header: React.FC<HeaderProps> = () => {
                         height={1000}
                         alt="logo"
                      />
-                  </li>
-                  <li className="header-text max-md:hidden">&bull;</li>
-                  <li className="header-text">#design</li>
-                  <li className="header-text max-md:hidden">&bull;</li>
-                  <li className="header-text">#design</li>
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.3,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text max-md:hidden"
+                  >
+                     &bull;
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.2,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text"
+                  >
+                     #design
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0.1,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text max-md:hidden"
+                  >
+                     &bull;
+                  </motion.li>
+                  <motion.li
+                     initial={{
+                        opacity: 0,
+                        y: -30,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        y: 0,
+                        transition: {
+                           delay: 0,
+                           type: "spring",
+                           stiffness: 50,
+                        },
+                     }}
+                     className="header-text"
+                  >
+                     #design
+                  </motion.li>
                </ul>
             </nav>
          </div>

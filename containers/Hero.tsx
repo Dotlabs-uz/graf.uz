@@ -1,58 +1,184 @@
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+import Item from "@/components/children/Item";
+
 interface HeroProps {}
 
 const Hero: React.FC<HeroProps> = () => {
    return (
       <>
          <div className="custom-container relative flex max-md:flex-col items-center justify-between">
-            <div className="w-1/2 max-sm:w-full">
-               <Image
-                  className="w-[80%] absolute z-[-1] top-0 left-1/2 -translate-x-1/2 max-md:hidden"
-                  src={"/images/smd.svg"}
-                  width={1000}
-                  height={1000}
-                  alt="smd"
-               />
-               <Image
-                  className="max-w-[1274px] w-full h-[700px] absolute z-[-1] top-20 left-0 opacity-5"
-                  src={"/images/grid.png"}
-                  width={1000}
-                  height={1000}
-                  alt="grid"
-               />
-               <h1 className="text-9xl max-2xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-md:text-center leading-[84px] font-black text-white">
-                  SMD 1.0
-               </h1>
-               <h2 className="text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white">
-                  GRAFUZ • SOHIB ABDURAMON
-               </h2>
-               <div className="max-md:block hidden">
+            <div className="w-1/2 max-sm:w-full px-5">
+               <motion.div
+                  initial={{
+                     opacity: 0,
+                     y: 100,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     y: 0,
+                     transition: {
+                        // delay: 0.1,
+                        type: "spring",
+                        stiffness: 20,
+                     },
+                  }}
+                  className="w-[80%] absolute z-[-1] top-0 left-[10%] -translate-x-1/2 max-md:hidden"
+               >
                   <Image
-                     src={"/images/man.svg"}
+                     className="w-full h-full"
+                     src={"/images/smd.svg"}
                      width={1000}
                      height={1000}
-                     alt="man"
+                     alt="smd"
                   />
+               </motion.div>
+               <motion.div
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.5,
+                     },
+                  }}
+                  className="max-w-[1274px] w-full h-[700px] absolute z-[-1] top-20 left-0"
+               >
+                  <Image
+                     className="w-full h-full opacity-5"
+                     priority
+                     src={"/images/grid.png"}
+                     width={1000}
+                     height={1000}
+                     alt="grid"
+                  />
+               </motion.div>
+               <div className="relative">
+                  <motion.h1
+                     initial={{
+                        opacity: 0,
+                        x: -100,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                           delay: 0.1,
+                           type: "spring",
+                           stiffness: 100,
+                        },
+                     }}
+                     className="text-9xl max-2xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-sm:text-[100px] max-md:text-center leading-[84px] font-black text-white"
+                  >
+                     SMD 1.0
+                  </motion.h1>
+                  <motion.h2
+                     initial={{
+                        opacity: 0,
+                        x: -100,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                           delay: 0.2,
+                           type: "spring",
+                           stiffness: 100,
+                        },
+                     }}
+                     className="text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white"
+                  >
+                     GRAFUZ • SOHIB ABDURAMON
+                  </motion.h2>
+                  <motion.div
+                     initial={{
+                        opacity: 0,
+                        x: -100,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                           delay: 0.3,
+                           type: "spring",
+                           stiffness: 100,
+                        },
+                     }}
+                     className="max-md:block hidden"
+                  >
+                     <Image
+                        src={"/images/avatar.svg"}
+                        width={1000}
+                        height={1000}
+                        alt="avatar"
+                     />
+                  </motion.div>
+                  <motion.button
+                     initial={{
+                        opacity: 0,
+                        x: -100,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        x: 0,
+                        transition: {
+                           delay: 0.4,
+                           type: "spring",
+                           stiffness: 100,
+                        },
+                     }}
+                     className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-  [20px] rounded-[20px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                  >
+                     BEPUL SINAB KOʻRISH
+                  </motion.button>
                </div>
-               <button className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-[20px] rounded-[20px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
-                  BEPUL SINAB KOʻRISH
-               </button>
             </div>
             <div className="w-2/5 max-md:hidden">
-               <div className="">
+               <motion.div
+                  initial={{
+                     opacity: 0,
+                     x: 100,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     x: 0,
+                     transition: {
+                        delay: 0.1,
+                        type: "spring",
+                        stiffness: 100,
+                     },
+                  }}
+                  className=""
+               >
                   <Image
-                     src={"/images/man.svg"}
+                     src={"/images/avatar.svg"}
                      width={1000}
                      height={1000}
-                     alt="man"
+                     alt="avatar"
                   />
-               </div>
+               </motion.div>
             </div>
          </div>
          <div className="custom-container">
-            <ul className="flex flex-wrap items-center justify-between max-md:justify-center gap-10 mt-20 max-md:mt-14 pl-10">
-               <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+            <ul className="flex flex-wrap items-center justify-between max-md:justify-center gap-10 max-md:gap-5 mt-20 max-md:mt-14 pl-10">
+               <motion.li
+                  initial={{
+                     opacity: 0,
+                     y: 50,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     y: 0,
+                     transition: {
+                        delay: 0,
+                        type: "spring",
+                        stiffness: 100,
+                     },
+                  }}
+                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2  text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+               >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -97,8 +223,23 @@ const Hero: React.FC<HeroProps> = () => {
                      </svg>
                   </span>
                   DIZAYN
-               </li>
-               <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+               </motion.li>
+               <motion.li
+                  initial={{
+                     opacity: 0,
+                     y: 50,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     y: 0,
+                     transition: {
+                        delay: 0.1,
+                        type: "spring",
+                        stiffness: 100,
+                     },
+                  }}
+                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+               >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -143,8 +284,23 @@ const Hero: React.FC<HeroProps> = () => {
                      </svg>
                   </span>
                   ANIMATSIYA
-               </li>
-               <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+               </motion.li>
+               <motion.li
+                  initial={{
+                     opacity: 0,
+                     y: 50,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     y: 0,
+                     transition: {
+                        delay: 0.2,
+                        type: "spring",
+                        stiffness: 100,
+                     },
+                  }}
+                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+               >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -189,8 +345,23 @@ const Hero: React.FC<HeroProps> = () => {
                      </svg>
                   </span>
                   MONTAJ
-               </li>
-               <li className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+               </motion.li>
+               <motion.li
+                  initial={{
+                     opacity: 0,
+                     y: 50,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     y: 0,
+                     transition: {
+                        delay: 0.3,
+                        type: "spring",
+                        stiffness: 100,
+                     },
+                  }}
+                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+               >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -235,7 +406,7 @@ const Hero: React.FC<HeroProps> = () => {
                      </svg>
                   </span>
                   VFX
-               </li>
+               </motion.li>
             </ul>
          </div>
       </>

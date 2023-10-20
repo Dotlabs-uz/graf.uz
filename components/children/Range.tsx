@@ -25,7 +25,7 @@ const Range: React.FC<Range> = ({ active, setActive }) => {
    const slideStyle = genSlideStyle(active);
 
    return (
-      <div className="range-warapper">
+      <div className="range-warapper max-lg:h-16">
          <div className="range">
             <span className="bullet" />
             <span className="bullet-1" />
@@ -38,7 +38,7 @@ const Range: React.FC<Range> = ({ active, setActive }) => {
             <span className="bullet-8" />
             <span className="range-value relative" style={slideStyle.range}>
                {/* <span className="circle" style={slideStyle.point} /> */}
-               <span className="absolute -top-2 -right-6 w-14 h-16 rounded-[10px] cursor-grab bg-white" />
+               <span className="absolute -top-2 max-lg:-top-[2.5px] -right-6 max-lg:-right-5 w-14 h-16 max-lg:w-12 max-lg:h-[55px] rounded-[10px] cursor-grab bg-white" />
             </span>
             <input
                className="range-slide"
@@ -46,7 +46,6 @@ const Range: React.FC<Range> = ({ active, setActive }) => {
                type="range"
                min="1"
                max="10"
-               defaultValue={active}
                value={active}
                step="1"
                onChange={handleChange}
