@@ -26,6 +26,7 @@ const Mentor: React.FC<MentorProps> = () => {
                   Video editing
                </p>
                <Image
+                  priority
                   className="relative z-10 max-sm:"
                   src={"/images/sohib.svg"}
                   width={1000}
