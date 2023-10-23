@@ -1,5 +1,5 @@
-import { type } from "os";
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 const genSlideStyle = (value: any) => {
    return {

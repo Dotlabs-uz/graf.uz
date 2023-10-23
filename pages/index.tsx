@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+
 import Header from "@/components/Header";
 import Hero from "@/containers/Hero";
 import Moduls from "@/containers/Moduls";
@@ -8,9 +10,7 @@ import Footer from "@/components/Footer";
 import PriceCourses from "@/containers/PriceCourses";
 import Course from "@/containers/Course";
 import Mentor from "@/containers/Mentor";
-
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
+import SwiperContainer from "@/containers/SwiperContainer";
 
 import { Inter } from "next/font/google";
 const inter = Inter({ subsets: ["latin"] });
@@ -51,7 +51,7 @@ export default function Home() {
 
    return (
       <>
-         <main className="">
+         <main className="overflow-hidden">
             <Header />
             <section className="">
                <Hero />
@@ -66,94 +66,7 @@ export default function Home() {
             </section>
 
             <section className="overflow-hidden">
-               <div className="custom-container pb-96">
-                  <div className="mb-16">
-                     <h2 className="text-[78px] max-md:text-[50px] max-sm:text-[30px] font-bold text-center text-white">
-                        BITIRUVCHILAR MAHORATI
-                     </h2>
-                  </div>
-
-                  <div className="max-lg:hidden mb-16 flex items-center justify-between">
-                     <div className="flex flex-col gap-4">
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              After effects
-                           </p>
-                        </div>
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              Photoshop
-                           </p>
-                        </div>
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              Premiere Pro
-                           </p>
-                        </div>
-                     </div>
-
-                     <div className="flex flex-col gap-4">
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              Design
-                           </p>
-                        </div>
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              Editing
-                           </p>
-                        </div>
-                        <div className="w-fit py-1 px-8 rounded-3xl border border-white">
-                           <p className="text-[28px] leading-[42px] text-white">
-                              Sound
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-
-                  <div className="relative ">
-                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[41%] max-lg:-translate-y-[360px] max-md:-translate-y-[360px] max-sm:-translate-y-[300px] w-[534px] max-xl:w-[460px] max-sm:w-[380px]">
-                        <Image
-                           src={"/images/phone.svg"}
-                           width={1000}
-                           height={1000}
-                           alt="phone"
-                        />
-                     </div>
-                     <Swiper
-                        className="mt-40"
-                        spaceBetween={20}
-                        slidesPerView={4}
-                        breakpoints={{
-                           0: {
-                              slidesPerView: 1,
-                              spaceBetween: 15,
-                           },
-                           640: {
-                              slidesPerView: 2,
-                              spaceBetween: 20,
-                           },
-                           1024: {
-                              slidesPerView: 3,
-                           },
-                           1280: {
-                              slidesPerView: 4,
-                           },
-                        }}
-                     >
-                        {[0, 1, 2, 3, 4, 5, 6, 7].map((item: number) => {
-                           return (
-                              <SwiperSlide
-                                 className="flex justify-center"
-                                 key={item}
-                              >
-                                 <div className="w-full h-[451px] max-xl:h-[390px] max-sm:h-[300px] rounded-[48px] shadow-[0px_10px_20px_#0094ff9c] bg-[#2f1c58] hover:-translate-y-3 duration-200 ease-in-out"></div>
-                              </SwiperSlide>
-                           );
-                        })}
-                     </Swiper>
-                  </div>
-               </div>
+               <SwiperContainer />
             </section>
 
             <section>
@@ -168,7 +81,22 @@ export default function Home() {
                <div className="mt-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
                <div className="bg-gradient-to-r from-[#18234A] from-1.3% to-[#0B0414] to-90.92% py-20">
                   <div className="custom-container flex max-lg:flex-col items-center justify-between ">
-                     <div className="">
+                     <motion.div
+                        initial={{
+                           x: -50,
+                           opacity: 0,
+                        }}
+                        whileInView={{
+                           x: 0,
+                           opacity: 1,
+
+                           transition: {
+                              type: "spring",
+                              stiffness: 60,
+                           },
+                        }}
+                        className=""
+                     >
                         <div className="">
                            <h3 className="mb-3 text-[30px] max-xl:text-[24px] font-medium leading-[41px] max-lg:text-center text-white">
                               Kurs boshlanish vaqti:
@@ -250,9 +178,24 @@ export default function Home() {
                               darsni qo’lga kiriting
                            </p>
                         </div>
-                     </div>
+                     </motion.div>
 
-                     <div className="relative max-lg:mt-20 max-w-xl max-xl:max-w-lg max-lg:max-w-full w-full pt-8 pb-12 max-md:pb-8 max-sm:pb-5 px-9 max-lg:px-5 max-sm:px-3 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                     <motion.div
+                        initial={{
+                           x: 50,
+                           opacity: 0,
+                        }}
+                        whileInView={{
+                           x: 0,
+                           opacity: 1,
+
+                           transition: {
+                              type: "spring",
+                              stiffness: 60,
+                           },
+                        }}
+                        className="relative max-lg:mt-20 max-w-xl max-xl:max-w-lg max-lg:max-w-full w-full pt-8 pb-12 max-md:pb-8 max-sm:pb-5 px-9 max-lg:px-5 max-sm:px-3 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
+                     >
                         <div className="w-48 max-sm:w-32 absolute -top-20 -left-20 max-lg:-left-16 max-sm:-top-16 max-sm:-left-12">
                            <Image
                               src={"/images/fire.png"}
@@ -297,7 +240,7 @@ export default function Home() {
                               ga rozilik bildirasiz.
                            </p>
                         </div>
-                     </div>
+                     </motion.div>
                   </div>
                </div>
                <div className="mb-7 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>

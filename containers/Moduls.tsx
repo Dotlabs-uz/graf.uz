@@ -3,6 +3,7 @@ import { useState } from "react";
 import Range from "@/components/children/Range";
 import Item from "@/components/children/Item";
 
+import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
 
 const arr = [
@@ -48,8 +49,6 @@ const arr = [
    },
 ];
 
-import { motion } from "framer-motion";
-
 interface ModulsProps {}
 
 const Moduls: React.FC<ModulsProps> = () => {
@@ -71,11 +70,15 @@ const Moduls: React.FC<ModulsProps> = () => {
             <motion.div
                initial={{
                   opacity: 0,
+                  y: 50,
                }}
                whileInView={{
                   opacity: 1,
+                  y: 0,
                   transition: {
                      delay: 0,
+                     type: "spring",
+                     stiffness: 100,
                   },
                }}
                className="relative border border-white px-7 py-1"
@@ -88,6 +91,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.1,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -top-2 -left-2 max-sm:-top-1 max-sm:-left-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -100,6 +105,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.2,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -top-2 -right-2 max-sm:-top-1 max-sm:-right-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -112,6 +119,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.3,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -top-2 left-1/2 max-sm:-top-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -124,6 +133,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.4,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -bottom-2 -left-2 max-sm:-bottom-1 max-sm:-left-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -136,6 +147,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.5,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -bottom-2 left-1/2 max-sm:-bottom-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -148,6 +161,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                      opacity: 1,
                      transition: {
                         delay: 0.6,
+                        duration: 0.5,
+                        ease: "easeIn",
                      },
                   }}
                   className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
@@ -254,11 +269,41 @@ const Moduls: React.FC<ModulsProps> = () => {
          </div>
 
          <div className="mb-10 max-sm:hidden">
-            <div className="mb-10 max-lg:mb-5">
+            <motion.div
+               initial={{
+                  opacity: 0,
+                  y: 50,
+               }}
+               whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                     delay: 0,
+                     type: "spring",
+                     stiffness: 60,
+                  },
+               }}
+               className="mb-10 max-lg:mb-5"
+            >
                <Range active={active} setActive={setActive} />
-            </div>
+            </motion.div>
 
-            <div className="rounded-[10px] border-2 overflow-hidden border-[#ffffff1a]">
+            <motion.div
+               initial={{
+                  opacity: 0,
+                  y: 50,
+               }}
+               whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                     delay: 0,
+                     type: "spring",
+                     stiffness: 60,
+                  },
+               }}
+               className="rounded-[10px] border-2 overflow-hidden border-[#ffffff1a]"
+            >
                <ul className="flex bg-[#00000029]">
                   <li className="flex items-center gap-2 py-3 px-10 max-lg:px-5 border-b-2 border-[#ffffff1a]">
                      <p className="w-3 h-3 max-lg:w-2 max-lg:h-2 rounded-full border-2 border-[#ffffff1a]"></p>
@@ -267,7 +312,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                   </li>
                   {[0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((item: number) => {
                      return (
-                        <li
+                        <motion.li
                            onClick={() => setActive(item + 1)}
                            key={item}
                            className={`w-full flex items-center justify-center text-[14px] max-xl:text-[10px] max-md:text-[8px] cursor-pointer ${
@@ -276,8 +321,24 @@ const Moduls: React.FC<ModulsProps> = () => {
                                  : "border-b-2 border-[#ffffff1a] text-[#ffffff33]"
                            }`}
                         >
-                           <button>MODUL #{item + 1}</button>
-                        </li>
+                           <motion.button
+                              initial={{
+                                 opacity: 0,
+                                 y: 10,
+                              }}
+                              whileInView={{
+                                 opacity: 1,
+                                 y: 0,
+                                 transition: {
+                                    delay: +`0.${item}`,
+                                    type: "spring",
+                                    stiffness: 60,
+                                 },
+                              }}
+                           >
+                              MODUL #{item + 1}
+                           </motion.button>
+                        </motion.li>
                      );
                   })}
                </ul>
@@ -289,14 +350,29 @@ const Moduls: React.FC<ModulsProps> = () => {
                            className="flex gap-5 py-6 px-20 max-lg:px-10 max-md:px-5 gradient"
                         >
                            <div className="w-1/2">
-                              <div className="">
+                              <motion.div
+                                 initial={{
+                                    opacity: 0,
+                                    x: -20,
+                                 }}
+                                 whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                       delay: 0.2,
+                                       type: "spring",
+                                       stiffness: 60,
+                                    },
+                                 }}
+                                 className=""
+                              >
                                  <p className="font-medium text-white">
                                     SMD | Modul #{active}
                                  </p>
                                  <h3 className="text-[31px] max-xl:text-[25px] max-lg:text-[20px] max-md:text-[18px] text-white">
                                     {item.title}
                                  </h3>
-                              </div>
+                              </motion.div>
                               <div className="">
                                  <ul className="flex flex-col max-md:justify-center gap-5 max-lg:gap-3 mt-5 max-lg:mt-3 max-md:mt-0 pl-10">
                                     {[0, 1, 2, 3, 4, 5].map((item: number) => {
@@ -306,15 +382,30 @@ const Moduls: React.FC<ModulsProps> = () => {
                               </div>
                            </div>
                            <div className="w-1/2">
-                              <div className="w-full h-full bg-gray-600">
+                              <motion.div
+                                 initial={{
+                                    opacity: 0,
+                                    x: 20,
+                                 }}
+                                 whileInView={{
+                                    opacity: 1,
+                                    x: 0,
+                                    transition: {
+                                       delay: 0.2,
+                                       type: "spring",
+                                       stiffness: 60,
+                                    },
+                                 }}
+                                 className="w-full h-full bg-gray-600"
+                              >
                                  qwf
-                              </div>
+                              </motion.div>
                            </div>
                         </div>
                      );
                   }
                })}
-            </div>
+            </motion.div>
          </div>
       </div>
    );

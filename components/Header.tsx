@@ -19,7 +19,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0,
+                           delay: 0.4,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -37,7 +37,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0.1,
+                           delay: 0.3,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -73,7 +73,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0.3,
+                           delay: 0.1,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -91,7 +91,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0.4,
+                           delay: 0,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -114,7 +114,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0.3,
+                           delay: 0.1,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -150,7 +150,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0.1,
+                           delay: 0.3,
                            type: "spring",
                            stiffness: 50,
                         },
@@ -168,7 +168,7 @@ const Header: React.FC<HeaderProps> = () => {
                         opacity: 1,
                         y: 0,
                         transition: {
-                           delay: 0,
+                           delay: 0.4,
                            type: "spring",
                            stiffness: 50,
                         },
