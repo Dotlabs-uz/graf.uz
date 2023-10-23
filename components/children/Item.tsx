@@ -1,10 +1,27 @@
+import { motion } from "framer-motion";
+
 interface ItemProps {
    item: number;
 }
 
 const Item: React.FC<ItemProps> = ({ item }) => {
    return (
-      <li className="w-fit max-md:w-full max-sm:w-fit max-md:text-center max-sm:text-start relative px-14 max-xl:px-10 max-lg:px-7 py-2 text-[25px] max-xl:text-[20px] max-lg:text-[16px] max-md:text-[12px] max-sm:text-[12px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white">
+      <motion.li
+         initial={{
+            opacity: 0,
+            x: -40,
+         }}
+         whileInView={{
+            opacity: 1,
+            x: 0,
+            transition: {
+               delay: +`0.${item}` + 0.2,
+               type: "spring",
+               stiffness: 60,
+            },
+         }}
+         className="w-fit max-md:w-full max-sm:w-fit max-md:text-center max-sm:text-start relative px-14 max-xl:px-10 max-lg:px-7 py-2 text-[25px] max-xl:text-[20px] max-lg:text-[16px] max-md:text-[12px] max-sm:text-[12px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+      >
          <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32 max-lg:-left-[100px]">
             <svg
                className="max-lg:w-40 h-fit"
@@ -37,7 +54,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
             {item + 1}
          </span>
          <p>Interfeys va instrumentlar</p>
-      </li>
+      </motion.li>
    );
 };
 

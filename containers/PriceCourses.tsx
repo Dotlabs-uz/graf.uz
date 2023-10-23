@@ -1,26 +1,138 @@
 import Image from "next/image";
 
+import { motion } from "framer-motion";
+import { GlowCapture, Glow } from "@codaworks/react-glow";
+
 interface PriceCoursesProps {}
 
 const PriceCourses: React.FC<PriceCoursesProps> = () => {
    return (
       <div className="custom-container">
          <div className="flex justify-center mb-9">
-            <div className="relative border border-white px-7 py-1">
-               <span className="absolute -top-2 -left-2 max-sm:-top-1 max-sm:-left-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
-               <span className="absolute -top-2 -right-2 max-sm:-top-1 max-sm:-right-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
-               <span className="absolute -top-2 left-1/2 max-sm:-top-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
-               <span className="absolute -bottom-2 -left-2 max-sm:-bottom-1 max-sm:-left-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
-               <span className="absolute -bottom-2 left-1/2 max-sm:-bottom-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
-               <span className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"></span>
+            <motion.div
+               initial={{
+                  opacity: 0,
+                  y: 50,
+               }}
+               whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                     delay: 0,
+                     type: "spring",
+                     stiffness: 100,
+                  },
+               }}
+               className="relative border border-white px-7 py-1"
+            >
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.1,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -top-2 -left-2 max-sm:-top-1 max-sm:-left-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.2,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -top-2 -right-2 max-sm:-top-1 max-sm:-right-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.3,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -top-2 left-1/2 max-sm:-top-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.4,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -bottom-2 -left-2 max-sm:-bottom-1 max-sm:-left-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.5,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -bottom-2 left-1/2 max-sm:-bottom-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
+               <motion.span
+                  initial={{
+                     opacity: 0,
+                  }}
+                  whileInView={{
+                     opacity: 1,
+                     transition: {
+                        delay: 0.6,
+                        duration: 0.5,
+                        ease: "easeIn",
+                     },
+                  }}
+                  className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
+               ></motion.span>
                <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold text-white">
-                  KURS NARXI
+                  Kurs dasturi
                </h2>
-            </div>
+            </motion.div>
          </div>
 
          <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-14 max-2xl:gap-x-10 max-xl:gap-x-5 gap-y-24">
-            <div className="relative h-fit">
+            <motion.div
+               initial={{
+                  x: "-100%",
+                  opacity: 0,
+               }}
+               whileInView={{
+                  x: 0,
+                  opacity: 1,
+
+                  transition: {
+                     delay: 0,
+                     type: "spring",
+                     stiffness: 70,
+                  },
+               }}
+               className="relative h-fit"
+            >
                <div className="mb-4 py-5 px-8 max-xl:px-5 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[11.14%] to-[#ffffff0a] to-[77.11%]">
                   <div className="flex items-center justify-between mb-3">
                      <p className="text-[28px] max-lg:text-[22px] font-medium leading-[0.374px] text-white">
@@ -88,7 +200,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      </p>
                   </div>
                </div>
-               <div className="w-96 absolute -left-40 -bottom-32 z-[-1]">
+               <div className="like duration-300 ease-in w-96 absolute -left-40 -bottom-32 z-[-1]">
                   <Image
                      src={"/images/up.svg"}
                      width={1000}
@@ -96,9 +208,24 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      alt="up"
                   />
                </div>
-            </div>
+            </motion.div>
+            <motion.div
+               initial={{
+                  x: "-100%",
+                  opacity: 0,
+               }}
+               whileInView={{
+                  x: 0,
+                  opacity: 1,
 
-            <div className="relative h-fit max-lg:overflow-hidden">
+                  transition: {
+                     delay: 0.1,
+                     type: "spring",
+                     stiffness: 70,
+                  },
+               }}
+               className="relative h-fit max-lg:overflow-hidden"
+            >
                <div className="mb-4 py-5 px-8 max-xl:px-5 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[11.14%] to-[#ffffff0a] to-[77.11%]">
                   <div className="flex items-center justify-between mb-3">
                      <p className="text-[28px] max-lg:text-[22px] font-medium leading-[0.374px] text-white">
@@ -177,7 +304,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      </p>
                   </div>
                </div>
-               <div className="w-52 absolute -right-24 max-xl:-right-20 max-lg:-right-16 top-0">
+               <div className="thunder w-52 absolute -right-24 max-xl:-right-20 max-lg:-right-16 top-0">
                   <Image
                      src={"/images/lightning.svg"}
                      width={1000}
@@ -185,9 +312,24 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      alt="up"
                   />
                </div>
-            </div>
+            </motion.div>
+            <motion.div
+               initial={{
+                  x: "-100%",
+                  opacity: 0,
+               }}
+               whileInView={{
+                  x: 0,
+                  opacity: 1,
 
-            <div className="relative h-fit">
+                  transition: {
+                     delay: 0.2,
+                     type: "spring",
+                     stiffness: 70,
+                  },
+               }}
+               className="relative h-fit"
+            >
                <div className="mb-4 py-5 px-8 max-xl:px-5 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[11.14%] to-[#ffffff0a] to-[77.11%]">
                   <div className="flex items-center justify-between mb-3">
                      <p className="text-[28px]  max-lg:text-[22px] font-medium leading-[0.374px] text-white">
@@ -279,7 +421,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      </p>
                   </div>
                </div>
-               <div className="w-80 absolute -left-28 -bottom-14 z-[-1]">
+               <div className="star w-80 absolute -left-28 -bottom-14 z-[-1]">
                   <Image
                      src={"/images/star.svg"}
                      width={1000}
@@ -287,7 +429,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      alt="up"
                   />
                </div>
-            </div>
+            </motion.div>
          </div>
       </div>
    );

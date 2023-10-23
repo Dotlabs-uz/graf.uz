@@ -19,11 +19,7 @@ const Social: React.FC<SocialProps> = ({ social }) => {
          <Link href={"#"} className="flex items-center gap-4 max-md:gap-2">
             <div className="relative">
                <div
-                  className={`w-full h-full bg-[${
-                     social.bg
-                  }] absolute z-[-1] top-1/2 left-1/2 duration-200 ease-out rounded-full shadow-[3px_3px_10px_${
-                     social.bg
-                  }] ${
+                  className={`w-full h-full bg-[#7800B0] absolute z-[-1] top-1/2 left-1/2 duration-200 ease-out rounded-full shadow-[3px_3px_10px_#7800B0] ${
                      active
                         ? "-translate-y-[65%] -translate-x-[40%]"
                         : "-translate-y-1/2 -translate-x-1/2"

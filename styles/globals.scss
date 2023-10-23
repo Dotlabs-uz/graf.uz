@@ -209,3 +209,59 @@ main {
 .container {
    text-align: center;
 }
+
+// .swiper-slide-active .my-shadow {
+//    @apply shadow-[0px_10px_20px_#0094ff9c];
+// }
+
+.custom-select-none {
+   @apply pointer-events-none select-none;
+}
+
+.like {
+   animation: like 7s ease infinite;
+}
+
+.thunder {
+   animation: thunder 3s ease infinite;
+}
+
+.star {
+   animation: star 6s ease infinite;
+}
+   
+@keyframes like {
+   0% {
+      @apply -bottom-16;
+   }
+   50% {
+      @apply -bottom-32;
+   }
+   100% {
+      @apply -bottom-16;
+   }
+}
+
+@keyframes thunder {
+   0% {
+      @apply -top-1;
+   }
+   50% {
+      @apply top-1;
+   }
+   100% {
+      @apply -top-1;
+   }
+}
+
+@keyframes star {
+   0% {
+      @apply -bottom-14;
+   }
+   50% {
+      @apply bottom-0;
+   }
+   100% {
+      @apply -bottom-14;
+   }
+}

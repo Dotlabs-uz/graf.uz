@@ -150,9 +150,10 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
-                  className=""
+                  className="custom-select-none"
                >
                   <Image
+                     className=""
                      src={"/images/avatar.svg"}
                      width={1000}
                      height={1000}
