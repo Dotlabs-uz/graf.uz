@@ -29,6 +29,7 @@ const Course: React.FC<CourseProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="w-1/2 max-md:w-full"
                   >
                      <div className="mb-8 max-sm:mb-5">
@@ -83,6 +84,7 @@ const Course: React.FC<CourseProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="relative z-10 custom-select-none"
                   >
                      <MouseParallaxChild
@@ -193,7 +195,7 @@ const Course: React.FC<CourseProps> = () => {
                </div>
             </div>
          </MouseParallaxContainer>
-         <div className="mb-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
+         <div className="w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
       </>
    );
 };

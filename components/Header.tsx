@@ -24,6 +24,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text"
                   >
                      #design
@@ -42,6 +43,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text max-md:hidden"
                   >
                      &bull;
@@ -60,6 +62,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text"
                   >
                      #motion
@@ -78,6 +81,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text max-md:hidden"
                   >
                      &bull;
@@ -96,6 +100,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                   >
                      <Image
                         className="header-logo"
@@ -119,6 +124,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text max-md:hidden"
                   >
                      &bull;
@@ -137,6 +143,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text"
                   >
                      #design
@@ -155,6 +162,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text max-md:hidden"
                   >
                      &bull;
@@ -173,6 +181,7 @@ const Header: React.FC<HeaderProps> = () => {
                            stiffness: 50,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="header-text"
                   >
                      #design

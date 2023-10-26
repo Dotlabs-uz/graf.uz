@@ -24,6 +24,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                      stiffness: 60,
                   },
                }}
+               viewport={{ once: true }}
                className="text-[78px] max-md:text-[50px] max-sm:text-[30px] font-bold text-center text-white"
             >
                BITIRUVCHILAR MAHORATI
@@ -45,6 +46,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">
@@ -65,6 +67,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">
@@ -85,6 +88,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">
@@ -107,6 +111,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">
@@ -127,6 +132,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">
@@ -147,6 +153,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                         stiffness: 60,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit py-1 px-8 rounded-3xl border border-white"
                >
                   <p className="text-[28px] leading-[42px] text-white">Sound</p>
@@ -166,6 +173,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                      stiffness: 60,
                   },
                }}
+               viewport={{ once: true }}
                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-[41%] max-lg:-translate-y-[360px] max-md:-translate-y-[360px] max-sm:-translate-y-[300px] w-[534px] max-xl:w-[460px] max-sm:w-[380px]"
             >
                <Image
@@ -190,6 +198,7 @@ const SwiperContainer: React.FC<SwiperContainerProps> = () => {
                      stiffness: 40,
                   },
                }}
+               viewport={{ once: true }}
                className="mt-40"
             >
                <Swiper
