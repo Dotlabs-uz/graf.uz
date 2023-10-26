@@ -53,7 +53,6 @@ interface ModulsProps {}
 
 const Moduls: React.FC<ModulsProps> = () => {
    const [active, setActive] = useState(1);
-   const [idx, setIdx] = useState(1);
    const [swiperRef, setSwiperRef] = useState<any>(null);
 
    const prevHandler = () => {
@@ -81,6 +80,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                      stiffness: 100,
                   },
                }}
+               viewport={{ once: true }}
                className="relative border border-white px-7 py-1"
             >
                <motion.span
@@ -95,6 +95,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -top-2 -left-2 max-sm:-top-1 max-sm:-left-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <motion.span
@@ -109,6 +110,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -top-2 -right-2 max-sm:-top-1 max-sm:-right-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <motion.span
@@ -123,6 +125,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -top-2 left-1/2 max-sm:-top-1 w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <motion.span
@@ -137,6 +140,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -bottom-2 -left-2 max-sm:-bottom-1 max-sm:-left-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <motion.span
@@ -151,6 +155,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -bottom-2 left-1/2 max-sm:-bottom-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <motion.span
@@ -165,6 +170,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                         ease: "easeIn",
                      },
                   }}
+                  viewport={{ once: true }}
                   className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
                <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold text-white">
@@ -283,6 +289,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                      stiffness: 60,
                   },
                }}
+               viewport={{ once: true }}
                className="mb-10 max-lg:mb-5"
             >
                <Range active={active} setActive={setActive} />
@@ -302,6 +309,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                      stiffness: 60,
                   },
                }}
+               viewport={{ once: true }}
                className="rounded-[10px] border-2 overflow-hidden border-[#ffffff1a]"
             >
                <ul className="flex bg-[#00000029]">
@@ -335,6 +343,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                                     stiffness: 60,
                                  },
                               }}
+                              viewport={{ once: true }}
                            >
                               MODUL #{item + 1}
                            </motion.button>
@@ -364,6 +373,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                                        stiffness: 60,
                                     },
                                  }}
+                                 viewport={{ once: true }}
                                  className=""
                               >
                                  <p className="font-medium text-white">
@@ -396,6 +406,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                                        stiffness: 60,
                                     },
                                  }}
+                                 viewport={{ once: true }}
                                  className="w-full h-full bg-gray-600"
                               >
                                  qwf

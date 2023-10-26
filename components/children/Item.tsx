@@ -11,6 +11,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
             opacity: 0,
             x: -40,
          }}
+         viewport={{ once: true }}
          whileInView={{
             opacity: 1,
             x: 0,

@@ -24,6 +24,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 20,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-[80%] absolute z-[-1] top-0 left-[10%] -translate-x-1/2 max-md:hidden"
                >
                   <Image
@@ -44,6 +45,7 @@ const Hero: React.FC<HeroProps> = () => {
                         delay: 0.5,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="max-w-[1274px] w-full h-[700px] absolute z-[-1] top-20 left-0"
                >
                   <Image
@@ -70,6 +72,7 @@ const Hero: React.FC<HeroProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="text-9xl max-2xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-sm:text-[100px] max-md:text-center leading-[84px] font-black text-white"
                   >
                      SMD 1.0
@@ -88,6 +91,7 @@ const Hero: React.FC<HeroProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white"
                   >
                      GRAFUZ • SOHIB ABDURAMON
@@ -106,6 +110,7 @@ const Hero: React.FC<HeroProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="max-md:block hidden"
                   >
                      <Image
@@ -129,6 +134,8 @@ const Hero: React.FC<HeroProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     viewport={{ once: true }}
+
                      className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-  [20px] rounded-[20px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
                   >
                      BEPUL SINAB KOʻRISH
@@ -150,6 +157,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="custom-select-none"
                >
                   <Image
@@ -178,6 +186,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2  text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
                >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
@@ -239,6 +248,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
                >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
@@ -300,6 +310,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
                >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
@@ -361,6 +372,7 @@ const Hero: React.FC<HeroProps> = () => {
                         stiffness: 100,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
                >
                   <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">

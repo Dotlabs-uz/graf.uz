@@ -78,7 +78,7 @@ export default function Home() {
             </section>
 
             <section>
-               <div className="mt-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
+               <div className="w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
                <div className="bg-gradient-to-r from-[#18234A] from-1.3% to-[#0B0414] to-90.92% py-20">
                   <div className="custom-container flex max-lg:flex-col items-center justify-between ">
                      <motion.div
@@ -95,6 +95,7 @@ export default function Home() {
                               stiffness: 60,
                            },
                         }}
+                        viewport={{ once: true }}
                         className=""
                      >
                         <div className="">
@@ -194,6 +195,7 @@ export default function Home() {
                               stiffness: 60,
                            },
                         }}
+                        viewport={{ once: true }}
                         className="relative max-lg:mt-20 max-w-xl max-xl:max-w-lg max-lg:max-w-full w-full pt-8 pb-12 max-md:pb-8 max-sm:pb-5 px-9 max-lg:px-5 max-sm:px-3 rounded-[30px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
                      >
                         <div className="w-48 max-sm:w-32 absolute -top-20 -left-20 max-lg:-left-16 max-sm:-top-16 max-sm:-left-12">

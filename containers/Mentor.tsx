@@ -31,6 +31,7 @@ const Mentor: React.FC<MentorProps> = () => {
                            stiffness: 20,
                         },
                      }}
+                     viewport={{ once: true }}
                      className="custom-select-none text-[30px] max-xl:text-[24px] max-lg:text-[18px] max-md:text-[14px] max-sm:text-[11px] font-medium"
                   >
                      Abdurahmonov Sohib
@@ -57,6 +58,7 @@ const Mentor: React.FC<MentorProps> = () => {
                                        stiffness: 40,
                                     },
                                  }}
+                                 viewport={{ once: true }}
                                  key={idx}
                               >
                                  {item}
@@ -83,6 +85,7 @@ const Mentor: React.FC<MentorProps> = () => {
                         stiffness: 40,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="pointer-events-none select-none absolute top-36 max-lg:top-40 max-sm:top-32 -left-14 max-lg:left-0 max-md:left-10 max-sm:left-0 z-20 w-fit px-3 text-[25px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[13px] font-bold leading-[42px] max-sm:leading-[27px] rounded-[10px] bg-gradient-to-r from-[#758ca169] from-[10.02%] to-[#9595952e] to-[61.43%] backdrop-blur-md text-center text-white"
                >
                   SMD kursi asoschisi
@@ -101,6 +104,7 @@ const Mentor: React.FC<MentorProps> = () => {
                         stiffness: 40,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="pointer-events-none select-none absolute top-96 max-sm:top-72 -left-28 max-lg:-left-14 max-md:-left-5 z-20 w-fit px-3 text-[25px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[13px] font-bold leading-[42px] max-sm:leading-[27px] rounded-[10px] bg-gradient-to-r from-[#758ca169] from-[10.02%] to-[#9595952e] to-[61.43%] backdrop-blur-md text-center text-white"
                >
                   Graphic Designer
@@ -119,6 +123,7 @@ const Mentor: React.FC<MentorProps> = () => {
                         stiffness: 40,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="pointer-events-none select-none absolute top-56 max-sm:top-48 -right-32 max-lg:-right-12 max-md:right-0 z-20 w-fit px-3 text-[25px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[13px] font-bold leading-[42px] max-sm:leading-[27px] rounded-[10px] bg-gradient-to-r from-[#758ca169] from-[10.02%] to-[#9595952e] to-[61.43%] backdrop-blur-md text-center text-white"
                >
                   Motion designer
@@ -137,6 +142,7 @@ const Mentor: React.FC<MentorProps> = () => {
                         stiffness: 40,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="pointer-events-none select-none absolute top-[450px] max-sm:top-80 -right-3 z-20 w-fit px-3 text-[25px] max-lg:text-[20px] max-md:text-[16px] max-sm:text-[13px] font-bold leading-[42px] max-sm:leading-[27px] rounded-[10px] bg-gradient-to-r from-[#758ca169] from-[10.02%] to-[#9595952e] to-[61.43%] backdrop-blur-md text-center text-white"
                >
                   Video editing
@@ -153,6 +159,7 @@ const Mentor: React.FC<MentorProps> = () => {
                         stiffness: 40,
                      },
                   }}
+                  viewport={{ once: true }}
                   className="relative z-10"
                >
                   <Image

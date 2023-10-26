@@ -87,6 +87,14 @@ main {
    pointer-events: none;
 }
 
+.glowable-text {
+   color: black;
+}
+
+[glow] .glowable-text {
+   color: var(--glow-color);
+}
+
 .range-warapper {
    padding-left: 20px;
    padding-right: 40px;
@@ -229,7 +237,7 @@ main {
 .star {
    animation: star 6s ease infinite;
 }
-   
+
 @keyframes like {
    0% {
       @apply -bottom-16;
@@ -256,12 +264,16 @@ main {
 
 @keyframes star {
    0% {
-      @apply -bottom-14;
+      @apply -bottom-16;
    }
    50% {
-      @apply bottom-0;
+      @apply -bottom-0;
    }
    100% {
-      @apply -bottom-14;
+      @apply -bottom-16;
    }
+}
+
+.abc {
+   
 }
