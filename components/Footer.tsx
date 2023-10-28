@@ -182,6 +182,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <Link href={"#"}>
                      <Image
                         className="w-28"
+                        priority
                         src={"/images/social/payme.svg"}
                         width={1000}
                         height={1000}
@@ -191,6 +192,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <Link href={"#"}>
                      <Image
                         className="w-28"
+                        priority
                         src={"/images/social/uzum.svg"}
                         width={1000}
                         height={1000}
