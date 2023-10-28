@@ -19,16 +19,23 @@ const Social: React.FC<SocialProps> = ({ social }) => {
          <Link href={"#"} className="flex items-center gap-4 max-md:gap-2">
             <div className="relative">
                <div
-                  className={`w-full h-full bg-[#7800B0] absolute z-[-1] top-1/2 left-1/2 duration-200 ease-out rounded-full shadow-[3px_3px_10px_#7800B0] ${
+                  style={{
+                     backgroundColor: `${social?.bg}`,
+                     boxShadow: `3px 3px 10px ${social?.bg}`,
+                  }}
+                  className={`w-full h-full absolute z-[-1] top-1/2 left-1/2 duration-200 ease-out rounded-full ${
                      active
                         ? "-translate-y-[65%] -translate-x-[40%]"
                         : "-translate-y-1/2 -translate-x-1/2"
                   }`}
                ></div>
                <div
-                  className={`overflow-hidden rounded-full duration-200 ease-out shadow-[3px_3px_10px_${
-                     social.bg
-                  }] ${active ? "translate-y-[10%] -translate-x-[5%]" : ""}`}
+                  style={{
+                     boxShadow: `3px 3px 10px ${social?.bg}`,
+                  }}
+                  className={`overflow-hidden rounded-full duration-200 ease-out ${
+                     active ? "translate-y-[10%] -translate-x-[5%]" : ""
+                  }`}
                >
                   <Image
                      className="w-9 max-md:w-6 max-sm:w-5"

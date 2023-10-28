@@ -38,14 +38,14 @@ const Course: React.FC<CourseProps> = () => {
                         </h2>
                      </div>
                      <div className="mb-8">
-                        <ul className="text-[37px] max-xl:text-[30px] max-md:text-[26px] font-medium mb-8 max-sm:text-center text-white">
+                        <ul className="text-[37px] max-xl:text-[30px] max-md:text-[26px] mb-8 max-sm:text-center text-white">
                            <li className="mb-1">Adobe Photoshop</li>
                            <li className="mb-1">Adobe Premiere Pro</li>
                            <li className="mb-1">Adobe After Effects</li>
                            <li className="mb-1">Adobe Audition</li>
                            <li className="">Mocha PRO</li>
                         </ul>
-                        <p className="text-[37px] max-xl:text-[30px] max-md:text-[20px] font-medium max-sm:leading-[25px] max-sm:text-center text-white">
+                        <p className="text-[37px] max-xl:text-[30px] max-md:text-[20px] max-sm:leading-[25px] max-sm:text-center text-white">
                            kabi dasturlarda SMM dizayn sohasida kerak bo’ladigan
                            barcha bilimga ega bo’lasiz.
                         </p>
@@ -87,6 +87,7 @@ const Course: React.FC<CourseProps> = () => {
                      viewport={{ once: true }}
                      className="relative z-10 custom-select-none"
                   >
+                     <div className="max-w-[637px] w-full h-full rounded-[50%] absolute z-[-2] top-0 -left-20 blur-[285px] bg-[#8f69de99]"></div>
                      <MouseParallaxChild
                         factorX={0.01}
                         factorY={0.01}

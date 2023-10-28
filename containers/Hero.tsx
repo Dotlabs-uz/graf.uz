@@ -9,6 +9,13 @@ const Hero: React.FC<HeroProps> = () => {
    return (
       <>
          <div className="custom-container relative flex max-md:flex-col items-center justify-between">
+            {/* <Image
+               className="w-full h-full absolute top-0"
+               src={"/images/glow-light.png"}
+               width={1000}
+               height={1000}
+               alt="glow light"
+            /> */}
             <div className="w-1/2 max-sm:w-full px-5">
                <motion.div
                   initial={{
@@ -73,7 +80,7 @@ const Hero: React.FC<HeroProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="text-9xl max-2xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-sm:text-[100px] max-md:text-center leading-[84px] font-black text-white"
+                     className="text-8xl max-lg:text-7xl max-md:text-[113px] max-sm:text-[100px] max-md:text-center leading-[84px] font-black text-white"
                   >
                      SMD 1.0
                   </motion.h1>
@@ -135,8 +142,7 @@ const Hero: React.FC<HeroProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-
-                     className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-  [20px] rounded-[20px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                     className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-[20px] rounded-[20px] bg-gradient-to-br from-[#1f50ff57] from-[10.42%] to-[#00b8b880] to-[77.11%] text-white"
                   >
                      BEPUL SINAB KOʻRISH
                   </motion.button>
@@ -171,7 +177,7 @@ const Hero: React.FC<HeroProps> = () => {
             </div>
          </div>
          <div className="custom-container">
-            <ul className="flex flex-wrap items-center justify-between max-md:justify-center gap-10 max-md:gap-5 mt-20 max-md:mt-14 pl-10">
+            <ul className="flex flex-wrap items-center justify-between max-xl:justify-center max-md:justify-center gap-x-16 max-xl:gap-x-28 gap-y-10 max-md:gap-y-10 mt-20 max-md:mt-14 pl-10 ">
                <motion.li
                   initial={{
                      opacity: 0,
@@ -187,9 +193,10 @@ const Hero: React.FC<HeroProps> = () => {
                      },
                   }}
                   viewport={{ once: true }}
-                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2  text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                  className="max-w-[210px] max-lg:max-w-xs max-sm:max-w-full w-full relative py-2 rounded-[10px] border-2 border-gray-500 bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
                >
-                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                  <div className="w-10 h-10 absolute z-[-1] top-0 -left-7 rounded-full blur-2xl bg-[#6e22d1]"></div>
+                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-[139px]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="206"
@@ -216,7 +223,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -232,7 +239,7 @@ const Hero: React.FC<HeroProps> = () => {
                         />
                      </svg>
                   </span>
-                  DIZAYN
+                  <p className="text-[25px] text-center text-white">DIZAYN</p>
                </motion.li>
                <motion.li
                   initial={{
@@ -249,9 +256,10 @@ const Hero: React.FC<HeroProps> = () => {
                      },
                   }}
                   viewport={{ once: true }}
-                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                  className="max-w-[210px] max-lg:max-w-xs max-sm:max-w-full w-full relative py-2 rounded-[10px] border-2 border-gray-500 bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
                >
-                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                  <div className="w-10 h-10 absolute z-[-1] top-0 -left-7 rounded-full blur-2xl bg-[#6e22d1]"></div>
+                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-[139px]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="206"
@@ -278,7 +286,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -294,7 +302,9 @@ const Hero: React.FC<HeroProps> = () => {
                         />
                      </svg>
                   </span>
-                  ANIMATSIYA
+                  <p className="text-[25px] text-center text-white">
+                     ANIMATSIYA
+                  </p>
                </motion.li>
                <motion.li
                   initial={{
@@ -311,9 +321,10 @@ const Hero: React.FC<HeroProps> = () => {
                      },
                   }}
                   viewport={{ once: true }}
-                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                  className="max-w-[210px] max-lg:max-w-xs max-sm:max-w-full w-full relative py-2 rounded-[10px] border-2 border-gray-500 bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
                >
-                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                  <div className="w-10 h-10 absolute z-[-1] top-0 -left-7 rounded-full blur-2xl bg-[#6e22d1]"></div>
+                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-[139px]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="206"
@@ -340,7 +351,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -356,7 +367,7 @@ const Hero: React.FC<HeroProps> = () => {
                         />
                      </svg>
                   </span>
-                  MONTAJ
+                  <p className="text-[25px] text-center text-white">MONTAJ</p>
                </motion.li>
                <motion.li
                   initial={{
@@ -373,9 +384,10 @@ const Hero: React.FC<HeroProps> = () => {
                      },
                   }}
                   viewport={{ once: true }}
-                  className="w-fit max-md:w-full max-md:text-center relative px-14 max-xl:px-10 py-2 text-[25px] rounded-[10px] bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
+                  className="max-w-[210px] max-lg:max-w-xs max-sm:max-w-full w-full relative py-2 rounded-[10px] border-2 border-gray-500 bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]"
                >
-                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-32">
+                  <div className="w-10 h-10 absolute z-[-1] top-0 -left-7 rounded-full blur-2xl bg-[#6e22d1]"></div>
+                  <span className="absolute z-50 top-1/2 -translate-y-1/2 -left-[139px]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="206"
@@ -402,7 +414,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -418,7 +430,7 @@ const Hero: React.FC<HeroProps> = () => {
                         />
                      </svg>
                   </span>
-                  VFX
+                  <p className="text-[25px] text-center text-white">VFX</p>
                </motion.li>
             </ul>
          </div>
