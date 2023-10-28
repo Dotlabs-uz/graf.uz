@@ -8,7 +8,7 @@ interface PriceCoursesProps {}
 
 const PriceCourses: React.FC<PriceCoursesProps> = () => {
    return (
-      <GlowCapture className="w-full py-32">
+      <GlowCapture className="w-full py-32   ">
          <div className="custom-container">
             <div className="flex justify-center mb-9 custom-select-none">
                <motion.div
@@ -118,13 +118,13 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                      viewport={{ once: true }}
                      className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                   ></motion.span>
-                  <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold text-white">
+                  <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold uppercase text-white">
                      Kurs dasturi
                   </h2>
                </motion.div>
             </div>
 
-            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-14 max-2xl:gap-x-10 max-xl:gap-x-5 gap-y-24">
+            <div className="grid grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1 gap-x-14 max-2xl:gap-x-7 max-xl:gap-x-5 gap-y-24">
                <Link href={"#"}>
                   <Glow color="red">
                      <motion.div
@@ -163,7 +163,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                               </p>
                            </div>
                            <div className="">
-                              <p className="text-[20px] text-[#ffffff52]">
+                              <p className="text-[20px] line-through text-[#ffffff52]">
                                  3 845 165 UZS
                               </p>
                            </div>
@@ -269,7 +269,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                               </p>
                            </div>
                            <div className="">
-                              <p className="text-[20px] text-[#ffffff52]">
+                              <p className="text-[20px] line-through text-[#ffffff52]">
                                  5 260 152 UZS
                               </p>
                            </div>
@@ -390,7 +390,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                               </p>
                            </div>
                            <div className="">
-                              <p className="text-[20px] text-[#ffffff52]">
+                              <p className="text-[20px] line-through text-[#ffffff52]">
                                  6 569 471 UZS
                               </p>
                            </div>

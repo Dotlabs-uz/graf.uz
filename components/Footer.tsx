@@ -8,28 +8,28 @@ const social = [
    {
       id: 0,
       icon: "instagram",
-      bg: "#7800B0",
+      bg: "#C21975",
       title: "Instagram",
       link: "#",
    },
    {
       id: 1,
       icon: "you-tube",
-      bg: "#7800B0",
+      bg: "red",
       title: "Youtube",
       link: "#",
    },
    {
       id: 2,
       icon: "tik-tok",
-      bg: "#7800B0",
+      bg: "#000000",
       title: "Tiktok",
       link: "#",
    },
    {
       id: 3,
       icon: "telegram",
-      bg: "#7800B0",
+      bg: "#1E96C8",
       title: "Telegram",
       link: "#",
    },
@@ -43,7 +43,7 @@ const social = [
    {
       id: 6,
       icon: "telegram",
-      bg: "#7800B0",
+      bg: "#1E96C8",
       title: "Telegram",
       link: "#",
    },
@@ -172,6 +172,7 @@ const Footer: React.FC<FooterProps> = () => {
                   <Link href={"#"}>
                      <Image
                         className="w-28"
+                        priority
                         src={"/images/social/click.svg"}
                         width={1000}
                         height={1000}

@@ -173,7 +173,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                   viewport={{ once: true }}
                   className="absolute -bottom-2 -right-2 max-sm:-bottom-1 max-sm:-right-1 max-sm: w-fit block p-2 max-sm:p-1 bg-[#0B0414] border border-white"
                ></motion.span>
-               <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold text-white">
+               <h2 className="text-[53px] max-lg:text-[44px] max-sm:text-[32px] font-bold uppercase text-white">
                   Kurs dasturi
                </h2>
             </motion.div>
@@ -379,7 +379,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                                  <p className="font-medium text-white">
                                     SMD | Modul #{active}
                                  </p>
-                                 <h3 className="text-[31px] max-xl:text-[25px] max-lg:text-[20px] max-md:text-[18px] text-white">
+                                 <h3 className="text-[31px] max-xl:text-[25px] max-lg:text-[20px] max-md:text-[18px] font-bold text-white">
                                     {item.title}
                                  </h3>
                               </motion.div>

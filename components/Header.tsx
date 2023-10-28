@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 interface HeaderProps {}
 
@@ -27,7 +28,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     #design
+                     <Link href={"#"}>#design</Link>
                   </motion.li>
                   <motion.li
                      initial={{
@@ -44,7 +45,7 @@ const Header: React.FC<HeaderProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="header-text max-md:hidden"
+                     className="header-text max-md:hidden custom-select-none"
                   >
                      &bull;
                   </motion.li>
@@ -65,7 +66,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     #motion
+                     <Link href={"#"}>#motion</Link>
                   </motion.li>
                   <motion.li
                      initial={{
@@ -82,7 +83,7 @@ const Header: React.FC<HeaderProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="header-text max-md:hidden"
+                     className="header-text max-md:hidden custom-select-none"
                   >
                      &bull;
                   </motion.li>
@@ -103,6 +104,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                   >
                      <Image
+                        priority
                         className="header-logo"
                         src={"/images/logo.png"}
                         width={1000}
@@ -125,7 +127,7 @@ const Header: React.FC<HeaderProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="header-text max-md:hidden"
+                     className="header-text max-md:hidden custom-select-none"
                   >
                      &bull;
                   </motion.li>
@@ -146,7 +148,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     #design
+                     <Link href={"#"}>#design</Link>
                   </motion.li>
                   <motion.li
                      initial={{
@@ -163,7 +165,7 @@ const Header: React.FC<HeaderProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="header-text max-md:hidden"
+                     className="header-text max-md:hidden custom-select-none"
                   >
                      &bull;
                   </motion.li>
@@ -184,7 +186,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     #design
+                     <Link href={"#"}>#design</Link>
                   </motion.li>
                </ul>
             </nav>

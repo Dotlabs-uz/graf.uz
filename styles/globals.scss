@@ -17,6 +17,7 @@ ul,
 ol,
 li {
    list-style: none;
+   // background: linear-gradient(77deg, # 9.86%, # 94.07%);
 }
 
 body {
@@ -218,10 +219,6 @@ main {
    text-align: center;
 }
 
-// .swiper-slide-active .my-shadow {
-//    @apply shadow-[0px_10px_20px_#0094ff9c];
-// }
-
 .custom-select-none {
    @apply pointer-events-none select-none;
 }
@@ -272,8 +269,4 @@ main {
    100% {
       @apply -bottom-16;
    }
-}
-
-.abc {
-   
 }
