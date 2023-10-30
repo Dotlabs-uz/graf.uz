@@ -270,3 +270,19 @@ main {
       @apply -bottom-16;
    }
 }
+
+// ====================================== //
+
+::-webkit-scrollbar {
+   width: 5px;
+}
+
+::-webkit-scrollbar-track {
+   background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+   // background: #cc00ff7d;
+   background: white;
+   border-radius: 10px;
+}

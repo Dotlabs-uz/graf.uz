@@ -5,6 +5,7 @@ import Item from "@/components/children/Item";
 
 import { motion } from "framer-motion";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Image from "next/image";
 
 const arr = [
    {
@@ -65,7 +66,7 @@ const Moduls: React.FC<ModulsProps> = () => {
 
    return (
       <div className="custom-container">
-         <div className="flex justify-center my-10">
+         <div className="flex justify-center my-14">
             <motion.div
                initial={{
                   opacity: 0,
@@ -274,7 +275,7 @@ const Moduls: React.FC<ModulsProps> = () => {
             </div>
          </div>
 
-         <div className="mb-10 max-sm:hidden">
+         <div className="relative mb-10 max-sm:hidden">
             <motion.div
                initial={{
                   opacity: 0,
@@ -292,6 +293,40 @@ const Moduls: React.FC<ModulsProps> = () => {
                viewport={{ once: true }}
                className="mb-10 max-lg:mb-5"
             >
+               {active <= 1 ? (
+                  <motion.div
+                     initial={{
+                        opacity: 0,
+                     }}
+                     whileInView={{
+                        opacity: 1,
+                        transition: {
+                           delay: 3,
+                           type: "spring",
+                           stiffness: 60,
+                        },
+                     }}
+                     viewport={{ once: true }}
+                     className="flex absolute left-16 max-xl:left-0 max-lg:-left-5 -top-20"
+                  >
+                     <p className="absolute text-xs top-5 left-2 text-white">
+                        Keyingi modul
+                     </p>
+                     <Image
+                        src={"/images/vector.svg"}
+                        width={100}
+                        height={100}
+                        alt="vector"
+                     />
+                     <Image
+                        className="translate-y-[24px]"
+                        src={"/images/arrow.svg"}
+                        width={100}
+                        height={100}
+                        alt="vector"
+                     />
+                  </motion.div>
+               ) : null}
                <Range active={active} setActive={setActive} />
             </motion.div>
 
@@ -407,9 +442,15 @@ const Moduls: React.FC<ModulsProps> = () => {
                                     },
                                  }}
                                  viewport={{ once: true }}
-                                 className="w-full h-full bg-gray-600"
+                                 className="w-full h-full rounded-[50px] overflow-hidden bg-gray-600"
                               >
-                                 qwf
+                                 <Image
+                                    className="object-cover w-full h-full"
+                                    src={"/images/bg-blue.svg"}
+                                    width={1000}
+                                    height={1000}
+                                    alt="bg-blue"
+                                 />
                               </motion.div>
                            </div>
                         </div>
