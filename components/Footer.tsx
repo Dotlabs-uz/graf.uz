@@ -144,7 +144,7 @@ const Footer: React.FC<FooterProps> = () => {
                <div className="flex max-md:flex-col items-center gap-9 max-md:gap-5">
                   <div className="w-20 h-20">
                      <Image
-                        src={"/images/logo-white.png"}
+                        src={"/images/logo-white.svg"}
                         width={1000}
                         height={1000}
                         alt="logo"
@@ -167,7 +167,7 @@ const Footer: React.FC<FooterProps> = () => {
                      </p>
                   </div>
                </div>
-
+                     
                <div className="flex items-center gap-5 max-lg:mt-3">
                   <Link href={"#"}>
                      <Image

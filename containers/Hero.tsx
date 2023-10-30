@@ -9,63 +9,78 @@ const Hero: React.FC<HeroProps> = () => {
    return (
       <>
          <div className="custom-container relative flex max-md:flex-col items-center justify-between">
-            {/* <Image
-               className="w-full h-full absolute top-0"
-               src={"/images/glow-light.png"}
-               width={1000}
-               height={1000}
-               alt="glow light"
-            /> */}
-            <div className="w-1/2 max-sm:w-full px-5">
+            <motion.div
+               initial={{
+                  opacity: 0,
+                  y: 100,
+               }}
+               whileInView={{
+                  opacity: 1,
+                  y: 0,
+                  transition: {
+                     // delay: 0.1,
+                     type: "spring",
+                     stiffness: 20,
+                  },
+               }}
+               viewport={{ once: true }}
+               className="w-[80%] absolute z-[-1] top-0 left-[10%] -translate-x-1/2 max-md:hidden"
+            >
+               <Image
+                  className="w-full h-full"
+                  src={"/images/smd.svg"}
+                  width={1000}
+                  height={1000}
+                  alt="smd"
+               />
+            </motion.div>
+            <motion.div
+               initial={{
+                  opacity: 0,
+               }}
+               whileInView={{
+                  opacity: 1,
+                  transition: {
+                     delay: 0.5,
+                  },
+               }}
+               viewport={{ once: true }}
+               className="max-w-[1274px] w-full h-[700px] max-md:h-[400px] absolute z-[-2] top-20 max-sm:top-0 left-0"
+            >
+               <Image
+                  className="w-full h-full opacity-5 max-sm:opacity-10"
+                  priority
+                  src={"/images/grid.png"}
+                  width={1000}
+                  height={1000}
+                  alt="grid"
+               />
+            </motion.div>
+            <div className="relative w-fit max-sm:w-full px-5">
                <motion.div
                   initial={{
                      opacity: 0,
-                     y: 100,
-                  }}
-                  whileInView={{
-                     opacity: 1,
-                     y: 0,
-                     transition: {
-                        // delay: 0.1,
-                        type: "spring",
-                        stiffness: 20,
-                     },
-                  }}
-                  viewport={{ once: true }}
-                  className="w-[80%] absolute z-[-1] top-0 left-[10%] -translate-x-1/2 max-md:hidden"
-               >
-                  <Image
-                     className="w-full h-full"
-                     src={"/images/smd.svg"}
-                     width={1000}
-                     height={1000}
-                     alt="smd"
-                  />
-               </motion.div>
-               <motion.div
-                  initial={{
-                     opacity: 0,
                   }}
                   whileInView={{
                      opacity: 1,
                      transition: {
-                        delay: 0.5,
+                        delay: 0.6,
+                        duration: 4,
                      },
                   }}
                   viewport={{ once: true }}
-                  className="max-w-[1274px] w-full h-[700px] absolute z-[-1] top-20 left-0"
+                  className="w-[1700px] max-xl:w-[1300px] max-lg:w-[1000px] max-md:w-[1500px] max-sm:w-[1000px] absolute z-[-1] -top-80 max-xl:-top-60 max-lg:-top-44 max-md:-top-64 max-sm:-top-44 left-1/2 -translate-x-1/2"
                >
                   <Image
-                     className="w-full h-full opacity-5"
-                     priority
-                     src={"/images/grid.png"}
+                     className="w-full h-full max-sm:opacity-75"
+                     src={"/images/glow-light.png"}
                      width={1000}
                      height={1000}
-                     alt="grid"
+                     alt="glow light"
                   />
                </motion.div>
                <div className="relative">
-                  <motion.h1
+                  <motion.div
                      initial={{
                         opacity: 0,
                         x: -100,
@@ -80,11 +95,16 @@ const Hero: React.FC<HeroProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="text-8xl max-lg:text-7xl max-md:text-[113px] max-sm:text-[100px] max-md:text-center leading-[84px] font-black text-white"
                   >
-                     SMD 1.0
-                  </motion.h1>
-                  <motion.h2
+                     <h1 className="text-[120px] max-xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-md:text-center leading-[84px] font-black text-white">
+                        SMD
+                        <span className="max-sm:block max-sm:text-[#ffffffa6]">
+                           1.0
+                        </span>
+                     </h1>
+                  </motion.div>
+
+                  <motion.div
                      initial={{
                         opacity: 0,
                         x: -100,
@@ -99,10 +119,12 @@ const Hero: React.FC<HeroProps> = () => {
                         },
                      }}
                      viewport={{ once: true }}
-                     className="text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white"
                   >
-                     GRAFUZ • SOHIB ABDURAMON
-                  </motion.h2>
+                     <h2 className="max-sm:opacity-60 text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-sm:text-lg max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white">
+                        GRAFUZ • SOHIB ABDURAMON
+                     </h2>
+                  </motion.div>
+
                   <motion.div
                      initial={{
                         opacity: 0,
@@ -148,6 +170,7 @@ const Hero: React.FC<HeroProps> = () => {
                   </motion.button>
                </div>
             </div>
+
             <div className="w-2/5 max-md:hidden">
                <motion.div
                   initial={{
@@ -176,6 +199,7 @@ const Hero: React.FC<HeroProps> = () => {
                </motion.div>
             </div>
          </div>
+
          <div className="custom-container">
             <ul className="flex flex-wrap items-center justify-between max-xl:justify-center max-md:justify-center gap-x-16 max-xl:gap-x-28 gap-y-10 max-md:gap-y-10 mt-20 max-md:mt-14 pl-10 ">
                <motion.li
