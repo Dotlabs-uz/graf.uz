@@ -9,7 +9,19 @@ interface SwiperContainerProps {}
 
 const SwiperContainer: React.FC<SwiperContainerProps> = () => {
    return (
-      <div className="custom-container pb-96">
+      <div className="custom-container relative pb-96">
+         <div className="w-1/3 h-[600px] absolute -top-40 left-1/2 -translate-x-1/2 bg-[#8259EC40] rounded-[50%] blur-[150px]"></div>
+
+         <div className="absolute top-0 left-1/2 -translate-x-1/2">
+            <Image
+               className="opacity-10"
+               src={"/images/grid.png"}
+               width={1000}
+               height={1000}
+               alt="grid"
+            />
+         </div>
+        
          <div className="mb-16 mt-5">
             <motion.h2
                initial={{

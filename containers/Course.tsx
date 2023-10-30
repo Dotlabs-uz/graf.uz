@@ -14,7 +14,17 @@ const Course: React.FC<CourseProps> = () => {
          <div className="mt-28 w-full h-1 bg-gradient-to-r from-[#00C2FF] to-[#364064]"></div>
          <MouseParallaxContainer className="overscroll-none">
             <div className="bg-gradient-to-r from-[#0B0414] from-1.3% to-[#18234A] to-90.92% py-40 max-md:py-28 max-sm:py-16">
-               <div className="custom-container flex max-md:flex-col max-md:gap-28 items-center justify-between max-md:justify-center">
+               <div className="custom-container relative flex max-md:flex-col max-md:gap-28 items-center justify-between max-md:justify-center">
+                  <div className="w-full h-[618.55px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/4">
+                     <Image
+                        className="opacity-50"
+                        src={"/images/grid-2.svg"}
+                        width={1000}
+                        height={1000}
+                        alt="grid"
+                     />
+                  </div>
+
                   <motion.div
                      initial={{
                         x: -50,
@@ -39,11 +49,17 @@ const Course: React.FC<CourseProps> = () => {
                      </div>
                      <div className="mb-8">
                         <ul className="text-[37px] max-xl:text-[30px] max-md:text-[26px] mb-8 max-sm:text-center text-white">
-                           <li className="mb-1">Adobe Photoshop</li>
-                           <li className="mb-1">Adobe Premiere Pro</li>
-                           <li className="mb-1">Adobe After Effects</li>
-                           <li className="mb-1">Adobe Audition</li>
-                           <li className="">Mocha PRO</li>
+                           <li className="mb-1">
+                              &bull; &nbsp;Adobe Photoshop
+                           </li>
+                           <li className="mb-1">
+                              &bull; &nbsp;Adobe Premiere Pro
+                           </li>
+                           <li className="mb-1">
+                              &bull; &nbsp;Adobe After Effects
+                           </li>
+                           <li className="mb-1">&bull; &nbsp;Adobe Audition</li>
+                           <li className="">&bull; &nbsp;Mocha PRO</li>
                         </ul>
                         <p className="text-[37px] max-xl:text-[30px] max-md:text-[20px] max-sm:leading-[25px] max-sm:text-center text-white">
                            kabi dasturlarda SMM dizayn sohasida kerak bo’ladigan
@@ -87,7 +103,7 @@ const Course: React.FC<CourseProps> = () => {
                      viewport={{ once: true }}
                      className="relative z-10 custom-select-none"
                   >
-                     <div className="max-w-[637px] w-full h-full rounded-[50%] absolute z-[-2] top-0 -left-20 blur-[285px] bg-[#8f69de99]"></div>
+                     <div className="max-w-[637px] w-full h-full rounded-[50%] absolute z-[-2] top-0 -left-20 blur-[285px] bg-[#8e69ded2]"></div>
                      <MouseParallaxChild
                         factorX={0.01}
                         factorY={0.01}

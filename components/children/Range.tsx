@@ -25,7 +25,23 @@ const Range: React.FC<Range> = ({ active, setActive }) => {
    const slideStyle = genSlideStyle(active);
 
    return (
-      <div className="range-warapper max-lg:h-16">
+      <motion.div
+         initial={{
+            opacity: 0,
+            y: 50,
+         }}
+         whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: {
+               delay: 0,
+               type: "spring",
+               stiffness: 60,
+            },
+         }}
+         viewport={{ once: true }}
+         className="range-warapper max-lg:h-16"
+      >
          <div className="range">
             <span className="bullet" />
             <span className="bullet-1" />
@@ -51,7 +67,7 @@ const Range: React.FC<Range> = ({ active, setActive }) => {
                onChange={handleChange}
             />
          </div>
-      </div>
+      </motion.div>
    );
 };
 
