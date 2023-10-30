@@ -96,7 +96,7 @@ const Footer: React.FC<FooterProps> = () => {
                         <Link href={"#"}>
                            <Image
                               className="w-14 h-14"
-                              src={"/images/social/Instagram.png"}
+                              src={"/images/social/mb-Instagram.svg"}
                               width={1000}
                               height={1000}
                               alt="Instagram"
@@ -107,7 +107,7 @@ const Footer: React.FC<FooterProps> = () => {
                         <Link href={"#"}>
                            <Image
                               className="w-14 h-14"
-                              src={"/images/social/youtub.png"}
+                              src={"/images/social/mb-youtube.svg"}
                               width={1000}
                               height={1000}
                               alt="Instagram"
@@ -118,7 +118,7 @@ const Footer: React.FC<FooterProps> = () => {
                         <Link href={"#"}>
                            <Image
                               className="w-14 h-14"
-                              src={"/images/social/tiktok.png"}
+                              src={"/images/social/mb-tiktok.svg"}
                               width={1000}
                               height={1000}
                               alt="Instagram"
@@ -167,7 +167,7 @@ const Footer: React.FC<FooterProps> = () => {
                      </p>
                   </div>
                </div>
-                     
+
                <div className="flex items-center gap-5 max-lg:mt-3">
                   <Link href={"#"}>
                      <Image

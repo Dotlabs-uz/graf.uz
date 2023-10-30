@@ -16,7 +16,7 @@ const Loader: React.FC<LoaderProps> = () => {
          }}
          className="w-full h-screen fixed z-50 top-0 left-0 flex items-center justify-center"
       >
-         <div className="w-60">
+         <div className="w-60 max-md:w-40">
             <Image
                className="animate-pulse custom-select-none"
                src={"/images/logo-white.svg"}
