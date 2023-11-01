@@ -5,6 +5,7 @@
 @font-face {
    font-family: text-Neue;
    src: url("/fonts/font.ttf");
+   font-display: swap;
 }
 
 * {
@@ -39,6 +40,10 @@ main {
 
 .custom-container {
    @apply max-w-[1728px] w-full m-auto px-48 max-2xl:px-20 max-xl:px-10 max-lg:px-6;
+}
+
+.custom-select-none {
+   @apply pointer-events-none select-none;
 }
 
 /* ==================== HEADER ==================== */
@@ -224,10 +229,6 @@ main {
 
 .container {
    text-align: center;
-}
-
-.custom-select-none {
-   @apply pointer-events-none select-none;
 }
 
 .like {

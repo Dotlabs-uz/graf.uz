@@ -148,7 +148,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     <Link href={"#"}>#design</Link>
+                     <Link href={"#"}>#color</Link>
                   </motion.li>
                   <motion.li
                      initial={{
@@ -186,7 +186,7 @@ const Header: React.FC<HeaderProps> = () => {
                      viewport={{ once: true }}
                      className="header-text"
                   >
-                     <Link href={"#"}>#design</Link>
+                     <Link href={"#"}>#editing</Link>
                   </motion.li>
                </ul>
             </nav>

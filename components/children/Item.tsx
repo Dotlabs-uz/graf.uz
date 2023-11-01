@@ -11,7 +11,6 @@ const Item: React.FC<ItemProps> = ({ item }) => {
             opacity: 0,
             x: -40,
          }}
-         viewport={{ once: true }}
          whileInView={{
             opacity: 1,
             x: 0,
@@ -21,6 +20,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                stiffness: 60,
             },
          }}
+         viewport={{ once: true }}
          className="w-fit max-md:w-full max-sm:w-fit max-md:text-center max-sm:text-start relative px-14 max-xl:px-10 max-lg:px-7 py-2 text-[25px] max-xl:text-[20px] max-lg:text-[16px] max-md:text-[12px] max-sm:text-[12px] rounded-[10px] border-2 border-gray-500 bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff0a] to-[77.11%] text-white"
       >
          <div className="max-sm:hidden w-10 h-10 absolute z-[-1] top-0 -left-7 rounded-full blur-2xl bg-[#6e22d1]"></div>
@@ -52,10 +52,10 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                </defs>
             </svg>
          </span>
-         <span className="w-[55px] h-[55px] max-lg:w-10 max-lg:h-10 max-md:w-9 max-md:h-9 flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
+         <span className="w-[55px] h-[55px] max-lg:w-10 max-lg:h-10 max-md:w-9 max-md:h-9 flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#4a4747] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
             {item + 1}
          </span>
-         <p>Interfeys va instrumentlar</p>
+         <p className="">Interfeys va instrumentlar</p>
       </motion.li>
    );
 };

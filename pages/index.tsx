@@ -15,6 +15,7 @@ import SwiperContainer from "@/containers/SwiperContainer";
 import { Inter } from "next/font/google";
 import CourseStart from "@/containers/CourseStart";
 import Loader from "@/components/Loader";
+import Head from "next/head";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -37,7 +38,29 @@ export default function Home() {
             <Loader />
          ) : (
             <>
-               <main className="overflow-hidden">
+               <Head>
+                  <meta charSet="utf-8"></meta>
+                  <title>GRAFUZ | SOHIB ABDURAMON</title>
+                  <meta
+                     name="description"
+                     content="Adobe Photoshop kurslari."
+                  ></meta>
+                  <meta
+                     http-equiv="Content-Type"
+                     content="text/html; charset=UTF-8"
+                  ></meta>
+                  <meta
+                     name="viewport"
+                     content="width=device-width, initial-scale=1.0"
+                  ></meta>
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+                  <link
+                     rel="icon"
+                     type="image/x-icon"
+                     href="/images/logo-white.svg"
+                  ></link>
+               </Head>
+               <main className={`overflow-hidden ${inter.className}`}>
                   <Header />
                   <section className="">
                      <Hero />
