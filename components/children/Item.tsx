@@ -52,7 +52,7 @@ const Item: React.FC<ItemProps> = ({ item }) => {
                </defs>
             </svg>
          </span>
-         <span className="w-[55px] h-[55px] max-lg:w-10 max-lg:h-10 max-md:w-9 max-md:h-9 flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#4a4747] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
+         <span className="w-[55px] h-[55px] max-lg:w-10 max-lg:h-10 max-md:w-9 max-md:h-9 flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#5e5b5b] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
             {item + 1}
          </span>
          <p className="">Interfeys va instrumentlar</p>
