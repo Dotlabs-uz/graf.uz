@@ -18,7 +18,8 @@ const Loader: React.FC<LoaderProps> = () => {
       >
          <div className="w-60 max-md:w-40">
             <Image
-               className="animate-pulse custom-select-none"
+               priority
+               className="w-full h-full animate-pulse custom-select-none"
                src={"/images/logo-white.svg"}
                width={1000}
                height={1000}

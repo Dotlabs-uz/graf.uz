@@ -67,7 +67,10 @@ const Course: React.FC<CourseProps> = () => {
                         </p>
                      </div>
                      <div className="">
-                        <button className="max-sm:w-full flex items-center max-sm:justify-center gap-3 py-3 px-6 max-sm:px-4 text-[25px] max-lg:text-[18px] font-bold leading-[41px] rounded-xl bg-gradient-to-tr from-[#cc00ff7d] from-[10.42%] to-[#074dff80] to-[77.11%] text-white">
+                        <motion.button
+                           whileTap={{ scale: 0.95 }}
+                           className="max-sm:w-full flex items-center max-sm:justify-center gap-3 py-3 px-6 max-sm:px-4 text-[25px] max-lg:text-[18px] font-bold leading-[41px] rounded-xl bg-gradient-to-tr from-[#cc00ff7d] from-[10.42%] to-[#074dff80] to-[77.11%] text-white"
+                        >
                            Kurs INTROsini tomosha qilish
                            <svg
                               className="max-lg:w-4 max-sm:hidden"
@@ -82,7 +85,7 @@ const Course: React.FC<CourseProps> = () => {
                                  fill="#E0E0E0"
                               />
                            </svg>
-                        </button>
+                        </motion.button>
                      </div>
                   </motion.div>
 

@@ -27,7 +27,8 @@ const Hero: React.FC<HeroProps> = () => {
                className="w-[80%] absolute z-[-1] top-0 left-[10%] -translate-x-1/2 max-md:hidden"
             >
                <Image
-                  className="w-full h-full"
+                  className="w-auto h-auto custom-select-none"
+                  priority
                   src={"/images/smd.svg"}
                   width={1000}
                   height={1000}
@@ -48,9 +49,9 @@ const Hero: React.FC<HeroProps> = () => {
                className="max-w-[1274px] w-full h-[700px] max-md:h-[400px] absolute z-[-2] top-20 max-sm:top-0 left-0"
             >
                <Image
-                  className="w-full h-full opacity-5 max-sm:opacity-10"
-                  priority
+                  className="w-auto h-auto opacity-5 max-sm:opacity-10 custom-select-none"
                   src={"/images/grid.png"}
+                  priority
                   width={1000}
                   height={1000}
                   alt="grid"
@@ -72,7 +73,7 @@ const Hero: React.FC<HeroProps> = () => {
                   className="w-[1700px] max-xl:w-[1300px] max-lg:w-[1000px] max-md:w-[1500px] max-sm:w-[1000px] absolute z-[-1] -top-80 max-xl:-top-60 max-lg:-top-44 max-md:-top-64 max-sm:-top-44 left-1/2 -translate-x-1/2"
                >
                   <Image
-                     className="w-full h-full max-sm:opacity-75"
+                     className="w-full h-full max-sm:opacity-75 custom-select-none"
                      src={"/images/glow-light.png"}
                      width={1000}
                      height={1000}
@@ -163,6 +164,7 @@ const Hero: React.FC<HeroProps> = () => {
                            stiffness: 100,
                         },
                      }}
+                     whileTap={{ scale: 0.95 }}
                      viewport={{ once: true }}
                      className="max-md:mt-4 max-sm:w-full py-1 px-8 text-[25px] max-lg:text-[20px] rounded-[20px] bg-gradient-to-br from-[#1f50ff57] from-[10.42%] to-[#00b8b880] to-[77.11%] text-white"
                   >
@@ -190,7 +192,8 @@ const Hero: React.FC<HeroProps> = () => {
                   className="custom-select-none"
                >
                   <Image
-                     className=""
+                     className="w-auto h-auto"
+                     priority
                      src={"/images/avatar.svg"}
                      width={1000}
                      height={1000}
