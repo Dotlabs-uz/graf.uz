@@ -250,7 +250,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#233861] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -313,7 +313,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#233861] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -378,7 +378,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#233861] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
@@ -441,7 +441,7 @@ const Hero: React.FC<HeroProps> = () => {
                         </defs>
                      </svg>
                   </span>
-                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-r from-[#ffffff33] from-[10.42%] to-[#ffffff70] to-[77.11%]">
+                  <span className="p-[15px] absolute z-50 top-1/2 -translate-y-1/2 -left-8 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#233861] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
                      <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="24"
