@@ -15,7 +15,7 @@ const Course: React.FC<CourseProps> = () => {
          <MouseParallaxContainer className="overscroll-none">
             <div className="bg-gradient-to-r from-[#0B0414] from-1.3% to-[#18234A] to-90.92% py-40 max-md:py-28 max-sm:py-16">
                <div className="custom-container relative flex max-md:flex-col max-md:gap-28 items-center justify-between max-md:justify-center">
-                  <div className="w-full h-[618.55px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/4">
+                  <div className="w-full h-[618.55px] absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/4 custom-select-none">
                      <Image
                         className="opacity-50"
                         src={"/images/grid-2.svg"}
