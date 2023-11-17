@@ -1,10 +1,57 @@
 import Image from "next/image";
+import axios from "axios";
 
+import moment from "moment";
 import { motion } from "framer-motion";
+import { useForm, SubmitHandler } from "react-hook-form";
+import { useEffect, useState } from "react";
 
-interface FormProps {}
+type Inputs = {
+   name: string;
+   number: string;
+   dateTime: string;
+};
 
-const Form: React.FC<FormProps> = () => {
+const Form: React.FC = () => {
+   const chat_id = "1024211914";
+   const TOKEN = "6428793742:AAEYSJ2TskL8pnLXbkWKb0TKjzX6BvTgsWg";
+   const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
+   const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
+   const {
+      register,
+      handleSubmit,
+      formState: { errors },
+      reset,
+   } = useForm<Inputs>();
+
+   const onSubmit: SubmitHandler<Inputs> = (data: any) => {
+      setIsSubmitSuccessful(!isSubmitSuccessful);
+      const dateTime = moment().format("HH:mm YY.MM.DD");
+
+      let OBJ = `Имя и фамилия: ${data.name} \n`;
+      OBJ += `Номер телефона: ${data.number} \n`;
+
+      axios
+         .post(URL, {
+            chat_id,
+            parse_mode: "html",
+            text: OBJ,
+         })
+         .then((res) => {
+            if (res.status === 200 || res.status === 201) {
+               console.log(res);
+            }
+         });
+   };
+
+   useEffect(() => {
+      reset({
+         name: "",
+         number: "",
+      });
+   }, [isSubmitSuccessful]);
+
    return (
       <motion.div
          initial={{
@@ -39,17 +86,41 @@ const Form: React.FC<FormProps> = () => {
                va bepul darsni qo’lga kiriting
             </p>
          </div>
-         <form className="w-full flex flex-col gap-4 max-lg:gap-3 max-sm:gap-2">
-            <input
-               type="text"
-               placeholder="Ism familyangiz"
-               className="inp w-full py-3 px-7 max-lg:px-5 text-2xl max-lg:text-xl max-sm:text-lg font-medium leading-[41px] rounded-xl text-[#ffffff54]"
-            />
-            <input
-               type="text"
-               placeholder="+998 (99) 999-99-99"
-               className="inp w-full py-3 px-7 max-lg:px-5 text-2xl max-lg:text-xl max-sm:text-lg font-medium leading-[41px] rounded-xl text-[#ffffff54]"
-            />
+         <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="w-full flex flex-col gap-4 max-lg:gap-3 max-sm:gap-2"
+         >
+            <div className="relative">
+               <input
+                  {...register("name", {
+                     required: true,
+                  })}
+                  type="text"
+                  placeholder="Ism familyangiz"
+                  className="inp w-full py-3 px-7 max-lg:px-5 text-2xl max-lg:text-xl max-sm:text-lg font-medium leading-[41px] rounded-xl text-[#ffffff54]"
+               />
+               {errors.name && (
+                  <p className="absolute -bottom-[18px] left-2 select-none text-red-700">
+                     error
+                  </p>
+               )}
+            </div>
+
+            <div className="relative">
+               <input
+                  {...register("number", {
+                     required: true,
+                  })}
+                  type="text"
+                  placeholder="+998 (99) 999-99-99"
+                  className="inp w-full py-3 px-7 max-lg:px-5 text-2xl max-lg:text-xl max-sm:text-lg font-medium leading-[41px] rounded-xl text-[#ffffff54]"
+               />
+               {errors.number && (
+                  <p className="absolute -bottom-[18px] left-2 select-none text-red-700">
+                     error
+                  </p>
+               )}
+            </div>
             <button className="py-3 max-md:py-0 text-2xl leading-[41px] font-bold rounded-xl bg-gradient-to-r from-[#cc00ff7d] from-[10.42%] to-[#074dff80] to-[77.11%] text-white">
                Yuborish
             </button>
