@@ -14,8 +14,8 @@ type Inputs = {
 
 const Form: React.FC = () => {
    const chat_id = "1024211914";
-   const TOKEN = "6428793742:AAEYSJ2TskL8pnLXbkWKb0TKjzX6BvTgsWg";
-   const URL = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+   const tg_tok = "6428793742:AAEYSJ2TskL8pnLXbkWKb0TKjzX6BvTgsWg";
+   const URL = `https://api.telegram.org/bot${tg_tok}/sendMessage`;
 
    const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
    const {
