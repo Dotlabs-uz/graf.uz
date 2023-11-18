@@ -16,7 +16,6 @@ const Form: React.FC = () => {
    const chat_id = "1024211914";
    const tg_tok = "6428793742:AAEYSJ2TskL8pnLXbkWKb0TKjzX6BvTgsWg";
    const URL = `https://api.telegram.org/bot${tg_tok}/sendMessage`;
-
    const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
    const {
       register,
@@ -24,7 +23,6 @@ const Form: React.FC = () => {
       formState: { errors },
       reset,
    } = useForm<Inputs>();
-
    const onSubmit: SubmitHandler<Inputs> = (data: any) => {
       setIsSubmitSuccessful(!isSubmitSuccessful);
       const dateTime = moment().format("HH:mm YY.MM.DD");
@@ -44,7 +42,6 @@ const Form: React.FC = () => {
             }
          });
    };
-
    useEffect(() => {
       reset({
          name: "",
