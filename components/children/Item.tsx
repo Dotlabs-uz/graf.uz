@@ -55,7 +55,9 @@ const Item: React.FC<ItemProps> = ({ item }) => {
          <span className="w-[55px] h-[55px] max-lg:w-10 max-lg:h-10 max-md:w-9 max-md:h-9 flex items-center justify-center absolute z-50 top-1/2 -translate-y-1/2 -left-5 rounded-full backdrop-blur-xl border-2 border-white bg-gradient-to-tr from-[#233861] from-[10.42%] to-[#bfbfbf] to-[77.11%]">
             {item.id + 1}
          </span>
-         <p className="">{item.modul}</p>
+         <p className="text-xl max-xl:text-base max-[900px]:text-xs max whitespace-nowrap">
+            {item.modul}
+         </p>
       </motion.li>
    );
 };
