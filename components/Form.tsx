@@ -13,7 +13,6 @@ type Inputs = {
 };
 
 const Form: React.FC = () => {
-   const chat_id = "-1001911283453";
    const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
    const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
    const {
@@ -32,7 +31,7 @@ const Form: React.FC = () => {
 
       axios
          .post(URL, {
-            chat_id: chat_id,
+            chat_id: process.env.NEXT_PUBLIC_ID,
             parse_mode: "html",
             text: OBJ,
          })
