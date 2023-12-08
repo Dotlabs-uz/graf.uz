@@ -14,8 +14,7 @@ type Inputs = {
 
 const Form: React.FC = () => {
    const chat_id = "-1001911283453";
-   const tg_tok = "6428793742:AAEYSJ2TskL8pnLXbkWKb0TKjzX6BvTgsWg";
-   const URL = `https://api.telegram.org/bot${tg_tok}/sendMessage`;
+   const URL = `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_TOKEN}/sendMessage`;
    const [isSubmitSuccessful, setIsSubmitSuccessful] = useState(false);
    const {
       register,
@@ -23,6 +22,7 @@ const Form: React.FC = () => {
       formState: { errors },
       reset,
    } = useForm<Inputs>();
+
    const onSubmit: SubmitHandler<Inputs> = (data: any) => {
       setIsSubmitSuccessful(!isSubmitSuccessful);
       const dateTime = moment().format("HH:mm YY.MM.DD");
