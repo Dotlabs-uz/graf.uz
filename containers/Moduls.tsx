@@ -612,14 +612,15 @@ const Moduls: React.FC<ModulsProps> = () => {
                      );
                   })}
                </ul>
+
                {arr.map((item: any) => {
                   if (active === item.id + 1) {
                      return (
                         <div
                            key={item.id}
-                           className="flex gap-5 py-6 px-20 max-lg:px-10 max-md:px-5 gradient"
+                           className="flex justify-between items-center gap-5 py-6 px-20 max-xl:px-10 max-lg:px-5 gradient"
                         >
-                           <div className="w-1/2">
+                           <div className="w-1/2 max-md:w-fit">
                               <motion.div
                                  initial={{
                                     opacity: 0,
@@ -644,7 +645,7 @@ const Moduls: React.FC<ModulsProps> = () => {
                                     {item.title}
                                  </h3>
                               </motion.div>
-                              <div className="">
+                              <div className="mt-5">
                                  <ul className="flex flex-col max-md:justify-center gap-5 max-lg:gap-3 mt-5 max-lg:mt-3 max-md:mt-0 pl-10">
                                     {item.moduls.map((item: any) => (
                                        <Item key={item.id} item={item} />
@@ -652,7 +653,8 @@ const Moduls: React.FC<ModulsProps> = () => {
                                  </ul>
                               </div>
                            </div>
-                           <div className="w-1/2">
+
+                           <div className="w-[40%] max-md:hidden">
                               <motion.div
                                  initial={{
                                     opacity: 0,
