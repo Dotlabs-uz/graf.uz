@@ -320,7 +320,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     </li>
                                     <li className="max-sm:text-center">
                                        <p>
-                                          <span>&bull;</span> Deadline uchun 2
+                                          <span>&bull;</span> Deadline uchun 3
                                           kun
                                        </p>
                                     </li>
@@ -333,7 +333,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     <li className="max-sm:text-center">
                                        <p>
                                           <span>&bull;</span> Video darslar
-                                          uchun 3 oy muddatida ruxsatni saqlab
+                                          uchun 5 oy muddatida ruxsatni saqlab
                                           quyish
                                        </p>
                                     </li>
@@ -362,7 +362,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     Kursga yozilish
                                  </button>
                                  <p className="text-[20px] text-center mt-5 max-xl:mt-3 text-[#ffffff42]">
-                                    *1 ta guruhda 15 ta ishtirokchi
+                                    *1 ta guruhda 8 ta ishtirokchi
                                  </p>
                               </div>
                            </div>
@@ -426,7 +426,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                  <ul className="text-white flex flex-col gap-4 max-lg:gap-2 text-[18px] max-2xl:text-[16px] font-semibold">
                                     <li className="max-sm:text-center">
                                        <p>
-                                          <span className="">&bull;</span> 9 ta
+                                          <span className="">&bull;</span> 10 ta
                                           modul
                                        </p>
                                     </li>
@@ -444,7 +444,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     </li>
                                     <li className="max-sm:text-center">
                                        <p>
-                                          <span>&bull;</span> Deadline uchun 2
+                                          <span>&bull;</span> Deadline uchun 5
                                           kun
                                        </p>
                                     </li>
@@ -457,7 +457,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     <li className="max-sm:text-center">
                                        <p>
                                           <span>&bull;</span> Video darslar
-                                          uchun 3 oy muddatida ruxsatni saqlab
+                                          uchun 7 oy muddatida ruxsatni saqlab
                                           quyish
                                        </p>
                                     </li>
@@ -497,7 +497,7 @@ const PriceCourses: React.FC<PriceCoursesProps> = () => {
                                     Kursga yozilish
                                  </button>
                                  <p className="text-[20px] text-center mt-5 max-xl:mt-3 text-[#ffffff42]">
-                                    *1 ta guruhda 15 ta ishtirokchi
+                                    *1 ta guruhda 5 ta ishtirokchi
                                  </p>
                               </div>
                               <div className="relative custom-select-none">
