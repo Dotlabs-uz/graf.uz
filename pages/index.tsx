@@ -43,7 +43,7 @@ export default function Home() {
                   <title>GRAFUZ | SOHIB ABDURAMON</title>
                   <meta
                      name="description"
-                     content="Adobe Photoshop kurslari."
+                     content="Adobe Photoshop, After Effects va boshqa grafik vositalarida trening. Darslar, maslahatlar va amaliy ko'nikmalar."
                   ></meta>
                   <meta
                      http-equiv="Content-Type"
@@ -59,6 +59,11 @@ export default function Home() {
                      type="image/x-icon"
                      href="/images/logo-white.svg"
                   ></link>
+                  <meta
+                     name="keywords"
+                     content="Adobe Photoshop, After Effects, Adobe Premiere Pro, Adobe Audition, Mocha PRO, SMM, ta'lim, darslar, yaratish, kurs, Design, Editing, Sound, ANIMATSIYA, MONTAJ, DIZAYN, VFX"
+                  />
+                  <meta name="author" content="GRAFUZ | SOHIB ABDURAMON"></meta>
                </Head>
                <main className={`overflow-hidden ${inter.className}`}>
                   <Header />
