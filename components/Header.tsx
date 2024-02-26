@@ -105,8 +105,8 @@ const Header: React.FC<HeaderProps> = () => {
                   >
                      <Image
                         priority
-                        className="header-logo"
-                        src={"/images/logo.png"}
+                        className="header-logo object-contain"
+                        src={"/images/g.png"}
                         width={1000}
                         height={1000}
                         alt="logo"
