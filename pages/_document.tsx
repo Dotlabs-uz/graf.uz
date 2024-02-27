@@ -6,10 +6,7 @@ export default function Document() {
 			<Head>
 				<meta charSet="utf-8"></meta>
 				<title>GRAFUZ | SOHIB ABDURAMON</title>
-				<meta
-					name="description"
-					content="Adobe Photoshop, After Effects va boshqa grafik vositalarida trening. Darslar, maslahatlar va amaliy ko'nikmalar."
-				></meta>
+				<meta name="description" content="Istalgan vaqtda, istalgan mavzuni, eng yaxshi narxda o'rganing!"></meta>
 				<meta
 					http-equiv="Content-Type"
 					content="text/html; charset=UTF-8"
@@ -28,7 +25,9 @@ export default function Document() {
 					name="keywords"
 					content="Adobe Photoshop, After Effects, Adobe Premiere Pro, Adobe Audition, Mocha PRO, SMM, ta'lim, darslar, yaratish, kurs, Design, Editing, Sound, ANIMATSIYA, MONTAJ, DIZAYN, VFX"
 				/>
-				<meta name="author" content="GRAFUZ | SOHIB ABDURAMON"></meta>
+				<meta name="author" content="SOHIB ABDURAMON"></meta>
+				<meta property="og:title" content="Bosh sahifa"></meta>
+				<meta property="og:type" content="Learning management system"></meta>
 			</Head>
 			<body>
 				<Main />
