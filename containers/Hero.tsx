@@ -80,7 +80,7 @@ const Hero: React.FC<HeroProps> = () => {
                      alt="glow light"
                   />
                </motion.div>
-               <div className="relative">
+               <div itemScope itemType="http://schema.org/Course" className="relative">
                   <motion.div
                      initial={{
                         opacity: 0,
@@ -97,9 +97,9 @@ const Hero: React.FC<HeroProps> = () => {
                      }}
                      viewport={{ once: true }}
                   >
-                     <h1 className="text-[120px] max-xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-md:text-center leading-[84px] font-black text-white">
+                     <h1 itemProp="course" className="text-[120px] max-xl:text-8xl max-lg:text-7xl max-md:text-[113px] max-md:text-center leading-[84px] font-black text-white">
                         SMD
-                        <span className="max-sm:block max-sm:text-[#ffffffa6]">
+                        <span itemProp="version" className="max-sm:block max-sm:text-[#ffffffa6]">
                            1.0
                         </span>
                      </h1>
@@ -121,7 +121,7 @@ const Hero: React.FC<HeroProps> = () => {
                      }}
                      viewport={{ once: true }}
                   >
-                     <h2 className="max-sm:opacity-60 text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-sm:text-lg max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white">
+                     <h2 itemProp="author" className="max-sm:opacity-60 text-[38px] max-2xl:text-[32px] max-xl:text-[28px] max-lg:text-[22px] max-md:text-[21px] max-sm:text-lg max-md:text-center font-semibold leading-[84px] max-md:leading-[37.5px] text-white">
                         GRAFUZ • SOHIB ABDURHAMON
                      </h2>
                   </motion.div>
